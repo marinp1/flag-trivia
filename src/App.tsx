@@ -9,10 +9,12 @@ const App = () => {
   return (
     <React.Fragment>
       <Header />
-      <Switch>
-        <Route path="/" component={Landing} exact={true} />
-        <Route path="/quiz" component={Game} />
-      </Switch>
+      <div id="app-container">
+        <Switch>
+          <Route path="/" component={Landing} exact={true} />
+          <Route path="/quiz" component={Game} />
+        </Switch>
+      </div>
     </React.Fragment>
   );
 };

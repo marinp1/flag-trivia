@@ -1,25 +1,27 @@
 import React from 'react';
-import LazyFlags from '../../Flags';
 import { FLAG_ISO_CODE } from '../../types';
+import './Question.css';
 
 export interface Props {
-  choices: [];
-  code: FLAG_ISO_CODE;
+  choices: FLAG_ISO_CODE[];
+  data: any;
 }
 
 const Question = (props: Props) => {
-  const [flag, setFlag] = React.useState();
-
-  const fetchFlag = async () => {
-    const content = (await LazyFlags[props.code]).default;
-    setFlag(content);
-  };
-
-  React.useEffect(() => {
-    fetchFlag();
-  });
-
-  return <img src={flag} />;
+  return (
+    <div>
+      <div className="flag-container">
+        <img src={props.data} />
+      </div>
+      <div className="question-grid">
+        {props.choices.map(choice => (
+          <button key={`choice-${choice}`} className="question">
+            <p>{choice}</p>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Question;
