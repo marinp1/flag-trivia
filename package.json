@@ -18,6 +18,9 @@
     "typescript": "3.6.3"
   },
   "scripts": {
+    "copy-flags": "rm -rf ./public/flags/ && node flagconverter.js",
+    "prestart": "yarn copy-flags",
+    "prebuild": "yarn copy-flags",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

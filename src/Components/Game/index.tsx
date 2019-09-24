@@ -19,7 +19,7 @@ const generateQuestions = (questionCount: number): IQuestion[] => {
   const pickRandom = (skip: FLAG_ISO_CODE) =>
     FLAGS.filter(c => c !== skip)[Math.floor(Math.random() * FLAGS.length)];
   const RandomPool = (skip: FLAG_ISO_CODE) =>
-    _.uniq([...new Array(100)].map(() => pickRandom(skip)));
+    _.uniq([...new Array(50)].map(() => pickRandom(skip)));
 
   return [...new Array(questionCount)].map((a, ind) => ({
     answer: FLAGS[ind],
@@ -33,7 +33,7 @@ const Game = () => {
   const [questionNumber, setQuestionNumber] = React.useState(-1);
   const [correct, setCorrect] = React.useState(0);
   const [incorrect, setIncorrect] = React.useState(0);
-  const [imageData, setImageData] = React.useState<any>();
+  const [imageData, setImageData] = React.useState<string>();
 
   const preloadedImages = React.useRef<
     Partial<{ [code in FLAG_ISO_CODE]: any }>
@@ -45,11 +45,15 @@ const Game = () => {
     }
     const code = questions[questionNumber].answer;
     if (!preloadedImages.current[code]) {
-      const data = (await LazyFlags[code]).default;
-      if (questionNumber === 0) {
-        setImageData(data);
-      }
-      preloadedImages.current[code] = data;
+      const data = LazyFlags[code];
+      const img = new Image();
+      img.src = data;
+      img.onload = () => {
+        if (questionNumber === 0) {
+          setImageData(data);
+        }
+        preloadedImages.current[code] = data;
+      };
     }
   };
 
@@ -63,7 +67,7 @@ const Game = () => {
   };
 
   React.useEffect(() => {
-    const questions = generateQuestions(20);
+    const questions = generateQuestions(FLAG_ISO_CODES.length);
     setQuestions(questions);
   }, []);
 
@@ -77,6 +81,8 @@ const Game = () => {
     preloadImage(questionNumber + 1);
     preloadImage(questionNumber + 2);
     preloadImage(questionNumber + 3);
+    preloadImage(questionNumber + 4);
+    preloadImage(questionNumber + 5);
     if (questionNumber <= 0) {
       return;
     }
