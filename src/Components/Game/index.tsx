@@ -16,11 +16,14 @@ interface IQuestion {
 
 const generateQuestions = (questionCount: number): IQuestion[] => {
   const FLAGS = _.shuffle(FLAG_ISO_CODES);
-  const pickRandom = () => FLAGS[Math.floor(Math.random() * FLAGS.length)];
+  const pickRandom = (skip: FLAG_ISO_CODE) =>
+    FLAGS.filter(c => c !== skip)[Math.floor(Math.random() * FLAGS.length)];
+  const RandomPool = (skip: FLAG_ISO_CODE) =>
+    _.uniq([...new Array(30)].map(() => pickRandom(skip)));
 
   return [...new Array(questionCount)].map((a, ind) => ({
     answer: FLAGS[ind],
-    choices: [FLAGS[ind], pickRandom(), pickRandom(), pickRandom()],
+    choices: [FLAGS[ind]].concat(RandomPool(FLAGS[ind]).slice(0, 3)),
   }));
 };
 
@@ -37,15 +40,26 @@ const Game = () => {
   >({});
 
   const preloadImage = async (questionNumber: number) => {
-    if (questionNumber > questions.length || questionNumber < 0) {
+    if (questionNumber >= questions.length || questionNumber < 0) {
       return;
     }
     const code = questions[questionNumber].answer;
-    const data = (await LazyFlags[code]).default;
-    if (questionNumber === 0) {
-      setImageData(data);
+    if (!preloadedImages.current[code]) {
+      const data = (await LazyFlags[code]).default;
+      if (questionNumber === 0) {
+        setImageData(data);
+      }
+      preloadedImages.current[code] = data;
     }
-    preloadedImages.current[code] = data;
+  };
+
+  const answerQuestion = (answer: FLAG_ISO_CODE) => {
+    if (answer === questions[questionNumber].answer) {
+      setCorrect(correct + 1);
+    } else {
+      setIncorrect(incorrect + 1);
+    }
+    setQuestionNumber(questionNumber + 1);
   };
 
   React.useEffect(() => {
@@ -54,13 +68,15 @@ const Game = () => {
   }, []);
 
   React.useEffect(() => {
-    if (questionNumber < 0) {
+    if (questionNumber < 0 || questionNumber >= questions.length) {
       return;
     }
-    if (questionNumber > 1) {
+    if (questionNumber >= 1) {
       setImageData(preloadedImages.current[questions[questionNumber].answer]);
     }
     preloadImage(questionNumber + 1);
+    preloadImage(questionNumber + 2);
+    preloadImage(questionNumber + 3);
     if (questionNumber <= 0) {
       return;
     }
@@ -81,13 +97,20 @@ const Game = () => {
     return <h1>Loading...</h1>;
   }
 
+  if (questionNumber >= questions.length) {
+    return <h1>Game over</h1>;
+  }
+
   return (
     <div>
-      <h2>Question {questionNumber + 1}</h2>
+      <h2>
+        Question {questionNumber + 1} ({incorrect} / {correct})
+      </h2>
       <React.Suspense fallback={<Loading />}>
         <Question
           choices={questions[questionNumber].choices}
           data={imageData}
+          answerQuestion={answerQuestion}
         />
       </React.Suspense>
     </div>
