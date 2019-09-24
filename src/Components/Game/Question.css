@@ -1,17 +1,20 @@
+.question-container {
+  text-align: center;
+}
+
 .flag-container {
-  width: 100%;
-  max-width: 500px;
   margin: auto;
   border: 1px solid #e1e1e1;
   background: #f5f5f5;
   box-sizing: border-box;
   border-radius: 4px;
   padding: 1rem;
+  display: inline-block;
 }
 
 .flag-container>img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 25vmax;
   border: 1px solid #f5f5f5;
 }
 

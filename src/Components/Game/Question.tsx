@@ -10,7 +10,7 @@ export interface Props {
 
 const Question = (props: Props) => {
   return (
-    <div>
+    <div className="question-container">
       <div className="flag-container">
         <img src={props.data} />
       </div>

@@ -19,11 +19,11 @@ const generateQuestions = (questionCount: number): IQuestion[] => {
   const pickRandom = (skip: FLAG_ISO_CODE) =>
     FLAGS.filter(c => c !== skip)[Math.floor(Math.random() * FLAGS.length)];
   const RandomPool = (skip: FLAG_ISO_CODE) =>
-    _.uniq([...new Array(30)].map(() => pickRandom(skip)));
+    _.uniq([...new Array(100)].map(() => pickRandom(skip)));
 
   return [...new Array(questionCount)].map((a, ind) => ({
     answer: FLAGS[ind],
-    choices: [FLAGS[ind]].concat(RandomPool(FLAGS[ind]).slice(0, 3)),
+    choices: _.shuffle([FLAGS[ind]].concat(RandomPool(FLAGS[ind]).slice(0, 3))),
   }));
 };
 
