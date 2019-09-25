@@ -27,7 +27,6 @@ const Container = styled.div<ContainerProps>`
   float: left;
   background: ${props => props.theme.colors.highlight};
   box-shadow: ${props => props.theme.boxShadow};
-  padding: 2rem;
   height: 100%;
   text-transform: uppercase;
   box-sizing: border-box;
@@ -42,6 +41,7 @@ const Container = styled.div<ContainerProps>`
 
   .hamburger {
     padding: 0;
+    display: none;
   }
 
   .hamburger-box {
@@ -65,8 +65,17 @@ const Container = styled.div<ContainerProps>`
     height: 4px;
   }
 
+  padding: 2rem 0.5rem;
+  ${breakpoints.mobile} {
+    padding: 2rem;
+    .hamburger {
+      display: block;
+    }
+  }
+
   width: ${props => getStylePerProps(props).width};
   ${breakpoints.tablet} {
+    display: block;
     max-width: ${props => (props.open ? '300px' : undefined)};
   }
 `;
