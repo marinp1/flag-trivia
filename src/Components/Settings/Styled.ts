@@ -41,7 +41,7 @@ const Container = styled.div<ContainerProps>`
 
   .hamburger {
     padding: 0;
-    display: none;
+    display: ${props => (props.open ? 'block' : 'none')};
   }
 
   .hamburger-box {
@@ -65,7 +65,7 @@ const Container = styled.div<ContainerProps>`
     height: 4px;
   }
 
-  padding: 2rem 0.5rem;
+  padding: ${props => (props.open ? '2rem' : '2rem 0.5rem')};
   ${breakpoints.mobile} {
     padding: 2rem;
     .hamburger {
