@@ -54,9 +54,12 @@ const Settings = (props: Props) => {
       return;
     }
     const touch = e.changedTouches[0];
-    const absX = Math.abs(touch.clientX - swipe.current.x);
-    if (absX > 50) {
+    const xDiff = touch.clientX - swipe.current.x;
+    if (xDiff > 50) {
       setOpen(true);
+    }
+    if (xDiff < -50) {
+      setOpen(false);
     }
     swipe.current = {};
   };
