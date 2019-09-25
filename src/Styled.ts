@@ -10,6 +10,11 @@ const Container = styled.div`
   bottom: 0;
 `;
 
+const AppContainer = styled.div`
+  padding: 2rem;
+`;
+
 export default {
+  AppContainer,
   Container,
 };

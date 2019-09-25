@@ -25,11 +25,13 @@ const App = () => {
       <Global styles={globalStyle(theme.value)} />
       <Styled.Container>
         <Settings selectedTheme={theme.name} selectTheme={selectTheme} />
-        <Header />
-        <Switch>
-          <Route path="/" component={Landing} exact={true} />
-          <Route path="/quiz" component={Game} />
-        </Switch>
+        <Styled.AppContainer>
+          <Header />
+          <Switch>
+            <Route path="/" component={Landing} exact={true} />
+            <Route path="/quiz" component={Game} />
+          </Switch>
+        </Styled.AppContainer>
       </Styled.Container>
     </ThemeProvider>
   );
