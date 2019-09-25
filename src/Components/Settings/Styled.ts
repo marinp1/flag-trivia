@@ -1,4 +1,5 @@
 import styled from '../../theme/styled';
+import { breakpoints } from '../../theme';
 
 interface ContainerProps {
   open: boolean;
@@ -7,25 +8,23 @@ interface ContainerProps {
 const getStylePerProps = (
   props: ContainerProps
 ): {
-  maxWidth: undefined | React.CSSProperties['maxWidth'];
   width: undefined | React.CSSProperties['width'];
   hamburgerTop: React.CSSProperties['height'];
 } => {
   if (props.open) {
     return {
-      maxWidth: '300px',
       width: '100%',
       hamburgerTop: 0,
     };
   }
   return {
-    maxWidth: undefined,
     width: undefined,
     hamburgerTop: '2rem',
   };
 };
 
 const Container = styled.div<ContainerProps>`
+  float: left;
   background: ${props => props.theme.colors.highlight};
   box-shadow: ${props => props.theme.boxShadow};
   padding: 2rem;
@@ -35,12 +34,11 @@ const Container = styled.div<ContainerProps>`
   h1 {
     font-weight: bold;
     margin-bottom: 1rem;
+    margin-right: 2rem;
   }
   h3 {
     margin-bottom: 0.5rem;
   }
-  width: ${props => getStylePerProps(props).width};
-  max-width: ${props => getStylePerProps(props).maxWidth};
 
   .hamburger {
     padding: 0;
@@ -48,13 +46,28 @@ const Container = styled.div<ContainerProps>`
 
   .hamburger-box {
     height: ${props => getStylePerProps(props).hamburgerTop};
+    width: 2rem;
+  }
+
+  .hamburger:hover {
+    opacity: 0.8 !important;
+  }
+
+  .hamburger:active {
+    opacity: 0.7 !important;
   }
 
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
+    background-color: ${props => props.theme.colors.primary} !important;
     width: 2rem;
     height: 4px;
+  }
+
+  width: ${props => getStylePerProps(props).width};
+  ${breakpoints.tablet} {
+    max-width: ${props => (props.open ? '300px' : undefined)};
   }
 `;
 
