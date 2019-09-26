@@ -21,7 +21,8 @@
     "typescript": "3.6.3"
   },
   "scripts": {
-    "copy-flags": "rm -rf ./public/flags/ && node flagconverter.js",
+    "update-data": "ts-node --project ./tsconfig.commonjs.json scripts/update-data.ts",
+    "copy-flags": "rm -rf ./public/flags/ && node scripts/flagconverter.js",
     "prestart": "yarn copy-flags",
     "prebuild": "yarn copy-flags",
     "start": "react-scripts start",
@@ -47,11 +48,14 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.139",
+    "@types/node-fetch": "^2.5.2",
     "@typescript-eslint/eslint-plugin": "^2.3.1",
     "@typescript-eslint/parser": "^2.3.1",
     "eslint-config-prettier": "^6.3.0",
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-prettier": "^3.1.1",
-    "prettier": "^1.18.2"
+    "node-fetch": "^2.6.0",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.4.1"
   }
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import _ from 'lodash';
 import LazyFlags from '../../Flags';
 
+import { COUNTRIES } from '../../types';
+
 import { FLAG_ISO_CODE, FLAG_ISO_CODES } from '../../types';
 const Question = React.lazy(() => import('./Question'));
 
@@ -16,6 +18,7 @@ interface IQuestion {
 
 const generateQuestions = (questionCount: number): IQuestion[] => {
   const FLAGS = _.shuffle(FLAG_ISO_CODES);
+  console.log(FLAGS);
   const pickRandom = (skip: FLAG_ISO_CODE) =>
     FLAGS.filter(c => c !== skip)[Math.floor(Math.random() * FLAGS.length)];
   const RandomPool = (skip: FLAG_ISO_CODE) =>
@@ -114,7 +117,10 @@ const Game = () => {
       </h2>
       <React.Suspense fallback={<Loading />}>
         <Question
-          choices={questions[questionNumber].choices}
+          choices={questions[questionNumber].choices.map(code => ({
+            code,
+            name: COUNTRIES[code].en,
+          }))}
           data={imageData}
           answerQuestion={answerQuestion}
         />
