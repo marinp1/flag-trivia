@@ -6,7 +6,7 @@ interface ContainerProps {
 }
 
 const getStylePerProps = (
-  props: ContainerProps
+  props: ContainerProps,
 ): {
   width: undefined | React.CSSProperties['width'];
   hamburgerTop: React.CSSProperties['height'];
@@ -76,8 +76,12 @@ const Container = styled.div<ContainerProps>`
   width: ${props => getStylePerProps(props).width};
   ${breakpoints.tablet} {
     display: block;
-    max-width: ${props => (props.open ? '300px' : undefined)};
+    max-width: ${props => (props.open ? '350px' : undefined)};
   }
+`;
+
+const Module = styled.div`
+  margin-bottom: 1.5rem;
 `;
 
 const HeaderBar = styled.div`
@@ -89,4 +93,5 @@ const HeaderBar = styled.div`
 export default {
   Container,
   HeaderBar,
+  Module,
 };

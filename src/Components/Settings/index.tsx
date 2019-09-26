@@ -2,7 +2,21 @@ import React from 'react';
 import { APP_THEME, APP_THEME_NAMES } from '../../theme';
 import Styled from './Styled';
 
+import {
+  IThemeNameTranslation,
+  ISettingsTranslation,
+  IGeneralTranslation,
+} from '../../translations/translationKeys';
+
+type Translations = IThemeNameTranslation &
+  ISettingsTranslation &
+  IGeneralTranslation;
+
 interface Props {
+  translations: Translations;
+  languages: string[];
+  selectedLanguage: string;
+  selectLanguage: (language: string) => void;
   selectedTheme: APP_THEME;
   selectTheme: (themeName: APP_THEME) => void;
 }
@@ -34,6 +48,7 @@ const HamburgerMenu = ({
 };
 
 const Settings = (props: Props) => {
+  const { translations } = props;
   const [open, setOpen] = React.useState(false);
 
   const swipe = React.useRef<Partial<{ swiping: boolean; x: number }>>({});
@@ -73,20 +88,33 @@ const Settings = (props: Props) => {
       onClick={() => (!open ? setOpen(true) : {})}
     >
       <Styled.HeaderBar>
-        {open && <h1>Settings</h1>}
+        {open && <h1>{translations.title}</h1>}
         <HamburgerMenu toggle={() => setOpen(!open)} open={open} />
       </Styled.HeaderBar>
       {open && (
         <React.Fragment>
-          <h3>Select theme</h3>
-          {APP_THEME_NAMES.map(themeName => (
-            <button
-              key={themeName}
-              onClick={() => props.selectTheme(themeName)}
-            >
-              {themeName}
-            </button>
-          ))}
+          <h3>{translations['setting-theme-label']}</h3>
+          <Styled.Module>
+            {APP_THEME_NAMES.map(themeName => (
+              <button
+                key={themeName}
+                onClick={() => props.selectTheme(themeName)}
+              >
+                {themeName}
+              </button>
+            ))}
+          </Styled.Module>
+          <Styled.Module>
+            <h3>{translations['setting-lang-label']}</h3>
+            {props.languages.map(language => (
+              <button
+                key={language}
+                onClick={() => props.selectLanguage(language)}
+              >
+                {language}
+              </button>
+            ))}
+          </Styled.Module>
         </React.Fragment>
       )}
     </Styled.Container>
