@@ -5,6 +5,11 @@ export interface IThemeNameTranslation {
   dark: string;
 }
 
+export interface ILanguageNameTranslation {
+  en: string;
+  fi: string;
+}
+
 export interface ISettingsTranslation {
   title: string;
   'setting-theme-label': string;
@@ -23,6 +28,7 @@ export interface IGeneralTranslation {
 
 interface ITranslation extends LocalizedStringsMethods {
   theme: IThemeNameTranslation;
+  lang: ILanguageNameTranslation;
   settings: ISettingsTranslation;
   game: IGameTranslation;
   general: IGeneralTranslation;

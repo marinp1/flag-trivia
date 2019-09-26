@@ -11,7 +11,7 @@ import { ThemeProvider } from 'emotion-theming';
 import globalStyle from './theme/globalStyle';
 import { currentTheme, getThemeByName, APP_THEME } from './theme';
 
-import translationsData from './translations';
+import translations from './translations';
 
 import Styled from './Styled';
 
@@ -21,13 +21,12 @@ function useForceUpdate() {
 }
 
 const App = () => {
-  const translations = React.useRef(translationsData);
   const [theme, setTheme] = React.useState(currentTheme());
 
   const forceUpdate = useForceUpdate();
 
   const changeLanguage = React.useCallback((language: string) => {
-    translations.current.setLanguage(language);
+    translations.setLanguage(language);
     forceUpdate();
   }, []);
 
@@ -40,16 +39,10 @@ const App = () => {
       <Global styles={globalStyle(theme.value)} />
       <Styled.Container>
         <Settings
-          languages={translations.current.getAvailableLanguages()}
-          selectedLanguage={translations.current.getLanguage()}
           selectLanguage={changeLanguage}
           selectedTheme={theme.name}
           selectTheme={selectTheme}
-          translations={{
-            ...translations.current.settings,
-            ...translations.current.theme,
-            ...translations.current.general,
-          }}
+          translations={translations}
         />
         <Styled.AppContainer>
           <Header />

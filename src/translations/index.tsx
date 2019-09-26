@@ -1,11 +1,17 @@
 import LocalizedStrings from 'react-localization';
 import ITranslation from './translationKeys';
 
+export type LANGUAGES = keyof typeof translations.lang;
+
 const translations: ITranslation = new LocalizedStrings({
   en: {
     general: {
       'application-name': 'Flag Trivia',
       'loading-text': 'Loading...',
+    },
+    lang: {
+      en: 'English',
+      fi: 'Finnish',
     },
     theme: {
       light: 'Light',
@@ -25,6 +31,10 @@ const translations: ITranslation = new LocalizedStrings({
     general: {
       'application-name': 'Lipputrivia',
       'loading-text': 'Ladataan...',
+    },
+    lang: {
+      en: 'englanti',
+      fi: 'suomi',
     },
     theme: {
       light: 'Valoisa',

@@ -2,20 +2,10 @@ import React from 'react';
 import { APP_THEME, APP_THEME_NAMES } from '../../theme';
 import Styled from './Styled';
 
-import {
-  IThemeNameTranslation,
-  ISettingsTranslation,
-  IGeneralTranslation,
-} from '../../translations/translationKeys';
-
-type Translations = IThemeNameTranslation &
-  ISettingsTranslation &
-  IGeneralTranslation;
+import Translations, { LANGUAGES } from '../../translations';
 
 interface Props {
-  translations: Translations;
-  languages: string[];
-  selectedLanguage: string;
+  translations: typeof Translations;
   selectLanguage: (language: string) => void;
   selectedTheme: APP_THEME;
   selectTheme: (themeName: APP_THEME) => void;
@@ -48,7 +38,11 @@ const HamburgerMenu = ({
 };
 
 const Settings = (props: Props) => {
-  const { translations } = props;
+  const {
+    settings: __settings__,
+    theme: __theme__,
+    lang: __lang__,
+  } = props.translations;
   const [open, setOpen] = React.useState(false);
 
   const swipe = React.useRef<Partial<{ swiping: boolean; x: number }>>({});
@@ -88,32 +82,34 @@ const Settings = (props: Props) => {
       onClick={() => (!open ? setOpen(true) : {})}
     >
       <Styled.HeaderBar>
-        {open && <h1>{translations.title}</h1>}
+        {open && <h1>{__settings__.title}</h1>}
         <HamburgerMenu toggle={() => setOpen(!open)} open={open} />
       </Styled.HeaderBar>
       {open && (
         <React.Fragment>
-          <h3>{translations['setting-theme-label']}</h3>
+          <h3>{__settings__['setting-theme-label']}</h3>
           <Styled.Module>
             {APP_THEME_NAMES.map(themeName => (
               <button
                 key={themeName}
                 onClick={() => props.selectTheme(themeName)}
               >
-                {themeName}
+                {__theme__[themeName]}
               </button>
             ))}
           </Styled.Module>
           <Styled.Module>
-            <h3>{translations['setting-lang-label']}</h3>
-            {props.languages.map(language => (
-              <button
-                key={language}
-                onClick={() => props.selectLanguage(language)}
-              >
-                {language}
-              </button>
-            ))}
+            <h3>{__settings__['setting-lang-label']}</h3>
+            {props.translations
+              .getAvailableLanguages()
+              .map((language: string) => (
+                <button
+                  key={language}
+                  onClick={() => props.selectLanguage(language)}
+                >
+                  {__lang__[language as LANGUAGES]}
+                </button>
+              ))}
           </Styled.Module>
         </React.Fragment>
       )}
