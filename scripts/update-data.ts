@@ -16,7 +16,10 @@ if (!fs.existsSync(flagDirectory)) {
   fs.mkdirSync(flagDirectory);
 }
 
-const countryNamePath = path.resolve(__dirname, '../src/types/countries.json');
+const countryNamePath = path.resolve(
+  __dirname,
+  '../src/resources/countries.json',
+);
 
 fetch('https://restcountries.eu/rest/v2/all')
   .then(res => res.json())

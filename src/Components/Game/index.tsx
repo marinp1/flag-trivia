@@ -2,9 +2,9 @@ import React from 'react';
 import _ from 'lodash';
 import LazyFlags from '../../Flags';
 
-import { COUNTRIES } from '../../types';
+import { FLAG_ISO_CODES, COUNTRIES } from '../../utils';
+import { FLAG_ISO_CODE } from '../../types';
 
-import { FLAG_ISO_CODE, FLAG_ISO_CODES } from '../../types';
 const Question = React.lazy(() => import('./Question'));
 
 const Loading = () => {

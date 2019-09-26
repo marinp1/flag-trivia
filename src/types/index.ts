@@ -1,4 +1,6 @@
-export * from './CountryIsoCode';
+import countries from '../resources/countries.json';
+
+export type FLAG_ISO_CODE = keyof typeof countries;
 
 type TranslationName = 'de' | 'es' | 'fr' | 'it';
 

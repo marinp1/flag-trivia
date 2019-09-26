@@ -1,5 +1,6 @@
 import crypto from 'crypto';
-import { FLAG_ISO_CODE, FLAG_ISO_CODES } from './types';
+import { FLAG_ISO_CODE } from './types';
+import { FLAG_ISO_CODES } from './utils';
 
 const getHash = (code: FLAG_ISO_CODE) =>
   crypto
