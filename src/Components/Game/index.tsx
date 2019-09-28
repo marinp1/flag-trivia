@@ -5,6 +5,8 @@ import LazyFlags from '../../Flags';
 import { FLAG_ISO_CODES, COUNTRIES } from '../../utils';
 import { FLAG_ISO_CODE } from '../../types';
 
+import Translations, { LANGUAGES } from '../../translations';
+
 const Question = React.lazy(() => import('./Question'));
 
 const Loading = () => {
@@ -18,7 +20,6 @@ interface IQuestion {
 
 const generateQuestions = (questionCount: number): IQuestion[] => {
   const FLAGS = _.shuffle(FLAG_ISO_CODES);
-  console.log(FLAGS);
   const pickRandom = (skip: FLAG_ISO_CODE) =>
     FLAGS.filter(c => c !== skip)[Math.floor(Math.random() * FLAGS.length)];
   const RandomPool = (skip: FLAG_ISO_CODE) =>
@@ -30,7 +31,7 @@ const generateQuestions = (questionCount: number): IQuestion[] => {
   }));
 };
 
-const Game = () => {
+const Game = ({ translations }: { translations: typeof Translations }) => {
   const [questions, setQuestions] = React.useState<IQuestion[]>([]);
 
   const [questionNumber, setQuestionNumber] = React.useState(-1);
@@ -103,23 +104,40 @@ const Game = () => {
   }, [questions]);
 
   if (questionNumber === -1) {
-    return <h1>Loading...</h1>;
+    return <h1>{translations.general['loading-text']}</h1>;
   }
 
   if (questionNumber >= questions.length) {
-    return <h1>Game over</h1>;
+    return (
+      <React.Fragment>
+        <h1>{translations.game['game-over-text']}</h1>
+        <h3>
+          You got {correct} / {questions.length} correct
+        </h3>
+      </React.Fragment>
+    );
   }
+
+  const language = translations.getLanguage() as LANGUAGES;
 
   return (
     <div>
       <h2>
-        Question {questionNumber + 1} ({incorrect} / {correct})
+        {translations.formatString(
+          translations.game['question-title-label'],
+          questionNumber + 1,
+          questions.length,
+        )}
+        <br />
+        Correct: {correct}
+        <br />
+        Incorrect: {incorrect}
       </h2>
       <React.Suspense fallback={<Loading />}>
         <Question
           choices={questions[questionNumber].choices.map(code => ({
             code,
-            name: COUNTRIES[code].en,
+            name: COUNTRIES[code][language],
           }))}
           data={imageData}
           answerQuestion={answerQuestion}

@@ -24,7 +24,7 @@ const translations: ITranslation = new LocalizedStrings({
     },
     game: {
       'game-over-text': 'Game over',
-      'question-title-label': 'Question {0}',
+      'question-title-label': 'Question {0} / {1}',
     },
   },
   fi: {
@@ -47,7 +47,7 @@ const translations: ITranslation = new LocalizedStrings({
     },
     game: {
       'game-over-text': 'Peli ohi',
-      'question-title-label': 'Kysymys {0}',
+      'question-title-label': 'Kysymys {0} / {1}',
     },
   },
 });

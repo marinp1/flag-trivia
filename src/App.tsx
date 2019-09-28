@@ -48,7 +48,10 @@ const App = () => {
           <Header />
           <Switch>
             <Route path="/" component={Landing} exact={true} />
-            <Route path="/quiz" component={Game} />
+            <Route
+              path="/quiz"
+              render={() => <Game translations={translations} />}
+            />
           </Switch>
         </Styled.AppContainer>
       </Styled.Container>

@@ -21,7 +21,7 @@ const Question = (props: Props) => {
       <div className="question-grid">
         {props.choices.map(choice => (
           <button
-            key={`choice-${choice}`}
+            key={`choice-${choice.code}`}
             className="question"
             onClick={() => props.answerQuestion(choice.code)}
           >
