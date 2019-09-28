@@ -47,7 +47,11 @@ const App = () => {
         <Styled.AppContainer>
           <Header />
           <Switch>
-            <Route path="/" component={Landing} exact={true} />
+            <Route
+              path="/"
+              exact={true}
+              render={() => <Landing translations={translations} />}
+            />
             <Route
               path="/quiz"
               render={() => <Game translations={translations} />}

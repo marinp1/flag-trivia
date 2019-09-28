@@ -35,11 +35,6 @@ const Container = styled.div<ContainerProps>`
     margin-bottom: 1.5rem;
     margin-right: 2rem;
   }
-  h3 {
-    font-weight: bold;
-    margin-bottom: 0.75rem;
-  }
-
   .hamburger {
     padding: 0;
     display: ${props => (props.open ? 'block' : 'none')};

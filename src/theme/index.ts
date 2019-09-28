@@ -11,6 +11,10 @@ export interface ITheme {
     background: React.CSSProperties['color'];
     highlight: React.CSSProperties['color'];
   };
+  combobox: {
+    color1: React.CSSProperties['color'];
+    color2: React.CSSProperties['color'];
+  };
   borderRadius: React.CSSProperties['borderRadius'];
   boxShadow: React.CSSProperties['boxShadow'];
   smallBoxShadow: React.CSSProperties['boxShadow'];
@@ -23,7 +27,11 @@ const lightTheme: ITheme = {
     border: '#e1e1e1',
     highlight: '#fff',
   },
-  borderRadius: '1rem',
+  combobox: {
+    color1: '#f9f9f9',
+    color2: '#e9e9e9',
+  },
+  borderRadius: '0.5rem',
   boxShadow: '0px 5px 10px 0px rgba(0,0,0,0.25)',
   smallBoxShadow: undefined,
 };
@@ -35,7 +43,11 @@ const darkTheme: ITheme = {
     border: '#2E2E2A',
     highlight: '#333',
   },
-  borderRadius: '1rem',
+  combobox: {
+    color1: '#4A4A4A',
+    color2: '#575757',
+  },
+  borderRadius: '0.5rem',
   boxShadow: '0px 5px 10px 0px rgba(0,0,0,0.25)',
   smallBoxShadow: '0px 1px 1px 0px rgba(0,0,0,0.05)',
 };

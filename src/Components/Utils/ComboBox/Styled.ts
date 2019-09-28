@@ -1,5 +1,10 @@
 import styled from '../../../theme/styled';
 
+const Title = styled.h3`
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+`;
+
 const Container = styled.div`
   border: 1px solid ${props => props.theme.colors.border};
   border-radius: ${props => props.theme.borderRadius};
@@ -11,7 +16,8 @@ const Selection = styled.div`
   cursor: pointer;
   font-weight: normal;
   padding: 1rem;
-  background: ${props => props.theme.colors.highlight};
+  border-bottom: 1px solid ${props => props.theme.colors.border};
+  background: ${props => props.theme.combobox.color1};
   &.selected {
     font-weight: bolder;
   }
@@ -22,9 +28,10 @@ const Selection = styled.div`
   &:last-child {
     border-bottom-left-radius: ${props => props.theme.borderRadius};
     border-bottom-right-radius: ${props => props.theme.borderRadius};
+    border-bottom: none;
   }
   &:nth-child(2n + 1) {
-    background: ${props => props.theme.colors.background};
+    background: ${props => props.theme.combobox.color2};
   }
   :hover {
     filter: brightness(95%);
@@ -35,6 +42,7 @@ const Selection = styled.div`
 `;
 
 export default {
+  Title,
   Container,
   Selection,
 };

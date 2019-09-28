@@ -89,9 +89,9 @@ const Settings = (props: Props) => {
       </Styled.HeaderBar>
       {open && (
         <React.Fragment>
-          <h3>{__settings__['setting-theme-label']}</h3>
           <Styled.Module>
             <ComboBox<APP_THEME>
+              title={__settings__['setting-theme-label']}
               choices={APP_THEME_NAMES.map(themeName => ({
                 key: themeName,
                 value: __theme__[themeName],
@@ -101,8 +101,8 @@ const Settings = (props: Props) => {
             />
           </Styled.Module>
           <Styled.Module>
-            <h3>{__settings__['setting-lang-label']}</h3>
             <ComboBox<LANGUAGES>
+              title={__settings__['setting-lang-label']}
               choices={props.translations
                 .getAvailableLanguages()
                 .map(language => ({

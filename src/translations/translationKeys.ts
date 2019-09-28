@@ -1,29 +1,40 @@
 import { LocalizedStringsMethods } from 'react-localization';
+import { APP_THEME } from '../theme';
+import { Region, GameMode } from '../types';
 
-export interface IThemeNameTranslation {
-  light: string;
-  dark: string;
-}
+type IThemeNameTranslation = { [key in APP_THEME]: string };
 
-export interface ILanguageNameTranslation {
+interface ILanguageNameTranslation {
   en: string;
   fi: string;
 }
 
-export interface ISettingsTranslation {
+interface ISettingsTranslation {
   title: string;
   'setting-theme-label': string;
   'setting-lang-label': string;
 }
 
-export interface IGameTranslation {
+interface IGameTranslation {
   'game-over-text': string;
   'question-title-label': string;
 }
 
-export interface IGeneralTranslation {
+interface IGeneralTranslation {
   'application-name': string;
   'loading-text': string;
+}
+
+type RegionTranslation = { [key in Region]: string };
+type ModeTranslation = { [key in GameMode]: string };
+
+interface ILandingTranslation {
+  'start-new-game-label': string;
+  'select-region-label': string;
+  'select-mode-label': string;
+  region: RegionTranslation;
+  mode: ModeTranslation;
+  'select-mode-info-label': ModeTranslation;
 }
 
 interface ITranslation extends LocalizedStringsMethods {
@@ -32,6 +43,7 @@ interface ITranslation extends LocalizedStringsMethods {
   settings: ISettingsTranslation;
   game: IGameTranslation;
   general: IGeneralTranslation;
+  landing: ILandingTranslation;
 }
 
 export default ITranslation;

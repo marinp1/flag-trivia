@@ -26,6 +26,30 @@ const translations: ITranslation = new LocalizedStrings({
       'game-over-text': 'Game over',
       'question-title-label': 'Question {0} / {1}',
     },
+    landing: {
+      'start-new-game-label': 'Start new game',
+      'select-region-label': 'Region',
+      'select-mode-label': 'Mode',
+      region: {
+        world: 'World',
+        africa: 'Africa',
+        asia: 'Asia',
+        europe: 'Europe',
+        'north-america': 'North America',
+        'south-america': 'South America',
+        oceania: 'Oceania',
+      },
+      mode: {
+        random: 'Random',
+        similar: 'Similar',
+        region: 'Region',
+      },
+      'select-mode-info-label': {
+        random: 'Choices are selected randomly among possible flags.',
+        similar: 'Choices are selected to be visually similar.',
+        region: 'Choices are selected from same region.',
+      },
+    },
   },
   fi: {
     general: {
@@ -48,6 +72,30 @@ const translations: ITranslation = new LocalizedStrings({
     game: {
       'game-over-text': 'Peli ohi',
       'question-title-label': 'Kysymys {0} / {1}',
+    },
+    landing: {
+      'start-new-game-label': 'Aloita uusi peli',
+      'select-region-label': 'Alue',
+      'select-mode-label': 'Pelimuoto',
+      region: {
+        world: 'Maailma',
+        africa: 'Afrikka',
+        asia: 'Aasia',
+        europe: 'Eurooppa',
+        'north-america': 'Pohjois-Amerikka',
+        'south-america': 'Etelä-Amerikka',
+        oceania: 'Oseania',
+      },
+      mode: {
+        random: 'Satunnainen',
+        similar: 'Samankaltaiset',
+        region: 'Alue',
+      },
+      'select-mode-info-label': {
+        random: 'Vaihtoehdot ovat valittu kaikkien lippujen joukosta.',
+        similar: 'Vaihtoehdot ovat samankaltaisia.',
+        region: 'Vaihtoehdot ovat samalta alueelta.',
+      },
     },
   },
 });
