@@ -32,11 +32,12 @@ const Container = styled.div<ContainerProps>`
   box-sizing: border-box;
   h1 {
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     margin-right: 2rem;
   }
   h3 {
-    margin-bottom: 0.5rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
   }
 
   .hamburger {

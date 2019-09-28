@@ -4,6 +4,8 @@ import Styled from './Styled';
 
 import Translations, { LANGUAGES } from '../../translations';
 
+import { ComboBox } from '../Utils';
+
 interface Props {
   translations: typeof Translations;
   selectLanguage: (language: string) => void;
@@ -89,27 +91,27 @@ const Settings = (props: Props) => {
         <React.Fragment>
           <h3>{__settings__['setting-theme-label']}</h3>
           <Styled.Module>
-            {APP_THEME_NAMES.map(themeName => (
-              <button
-                key={themeName}
-                onClick={() => props.selectTheme(themeName)}
-              >
-                {__theme__[themeName]}
-              </button>
-            ))}
+            <ComboBox<APP_THEME>
+              choices={APP_THEME_NAMES.map(themeName => ({
+                key: themeName,
+                value: __theme__[themeName],
+              }))}
+              setSelection={props.selectTheme}
+              selection={props.selectedTheme}
+            />
           </Styled.Module>
           <Styled.Module>
             <h3>{__settings__['setting-lang-label']}</h3>
-            {props.translations
-              .getAvailableLanguages()
-              .map((language: string) => (
-                <button
-                  key={language}
-                  onClick={() => props.selectLanguage(language)}
-                >
-                  {__lang__[language as LANGUAGES]}
-                </button>
-              ))}
+            <ComboBox<LANGUAGES>
+              choices={props.translations
+                .getAvailableLanguages()
+                .map(language => ({
+                  key: language as LANGUAGES,
+                  value: __lang__[language as LANGUAGES],
+                }))}
+              setSelection={props.selectLanguage}
+              selection={props.translations.getLanguage() as LANGUAGES}
+            />
           </Styled.Module>
         </React.Fragment>
       )}

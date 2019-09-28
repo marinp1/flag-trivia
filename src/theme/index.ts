@@ -13,6 +13,7 @@ export interface ITheme {
   };
   borderRadius: React.CSSProperties['borderRadius'];
   boxShadow: React.CSSProperties['boxShadow'];
+  smallBoxShadow: React.CSSProperties['boxShadow'];
 }
 
 const lightTheme: ITheme = {
@@ -24,6 +25,7 @@ const lightTheme: ITheme = {
   },
   borderRadius: '1rem',
   boxShadow: '0px 5px 10px 0px rgba(0,0,0,0.25)',
+  smallBoxShadow: undefined,
 };
 
 const darkTheme: ITheme = {
@@ -35,6 +37,7 @@ const darkTheme: ITheme = {
   },
   borderRadius: '1rem',
   boxShadow: '0px 5px 10px 0px rgba(0,0,0,0.25)',
+  smallBoxShadow: '0px 1px 1px 0px rgba(0,0,0,0.05)',
 };
 
 export type APP_THEME = 'light' | 'dark';
@@ -49,7 +52,7 @@ const APP_THEMES: {
 export const APP_THEME_NAMES = Object.keys(APP_THEMES) as APP_THEME[];
 
 export const getThemeByName = (
-  name: APP_THEME
+  name: APP_THEME,
 ): {
   name: APP_THEME;
   value: ITheme;
