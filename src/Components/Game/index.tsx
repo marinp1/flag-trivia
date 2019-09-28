@@ -9,6 +9,8 @@ import Translations, { LANGUAGES } from '../../translations';
 
 const Question = React.lazy(() => import('./Question'));
 
+const CHOICE_COUNT = 4;
+
 const Loading = () => {
   return <h1>Loading...</h1>;
 };
@@ -20,14 +22,23 @@ interface IQuestion {
 
 const generateQuestions = (questionCount: number): IQuestion[] => {
   const FLAGS = _.shuffle(FLAG_ISO_CODES);
-  const pickRandom = (skip: FLAG_ISO_CODE) =>
-    FLAGS.filter(c => c !== skip)[Math.floor(Math.random() * FLAGS.length)];
-  const RandomPool = (skip: FLAG_ISO_CODE) =>
-    _.uniq([...new Array(50)].map(() => pickRandom(skip)));
+  const pickRandom = () =>
+    FLAG_ISO_CODES[_.random(0, FLAG_ISO_CODES.length - 1)];
+
+  const getChoices = (answer: FLAG_ISO_CODE): FLAG_ISO_CODE[] => {
+    const choices = [answer];
+    while (choices.length < CHOICE_COUNT) {
+      const randomFlag = pickRandom();
+      if (!choices.includes(randomFlag)) {
+        choices.push(randomFlag);
+      }
+    }
+    return _.shuffle(choices);
+  };
 
   return [...new Array(questionCount)].map((a, ind) => ({
     answer: FLAGS[ind],
-    choices: _.shuffle([FLAGS[ind]].concat(RandomPool(FLAGS[ind]).slice(0, 3))),
+    choices: getChoices(FLAGS[ind]),
   }));
 };
 
