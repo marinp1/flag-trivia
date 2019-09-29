@@ -1,6 +1,11 @@
 import styled from './theme/styled';
+import { breakpoints } from './theme';
 
-const Container = styled.div`
+interface Props {
+  settingsOpen: boolean;
+}
+
+const Container = styled.div<Props>`
   display: grid;
   position: absolute;
   background: ${props => props.theme.colors.background};
@@ -8,14 +13,17 @@ const Container = styled.div`
   right: 0;
   left: 0;
   bottom: 0;
-  grid-template-columns: auto 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: 'settings app';
+  grid-template-columns: ${props =>
+    props.settingsOpen ? '100% 0%' : 'auto 1fr'};
+  ${breakpoints.tablet} {
+    grid-template-columns: auto 1fr;
+  }
 `;
 
 const AppContainer = styled.div`
   grid-area: app;
-  padding: 0 2rem 2rem 2rem;
   height: 100%;
   width: 100%;
   box-sizing: border-box;

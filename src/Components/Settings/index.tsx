@@ -6,9 +6,13 @@ import Translations, { LANGUAGES } from '../../translations';
 
 import { ComboBox } from '../Utils';
 
+import { LANG_FLAG } from '../../utils';
+
 import './hamburgers.css';
 
 interface Props {
+  setSettingsStatus: (val: boolean) => void;
+  settingsOpen: boolean;
   translations: typeof Translations;
   selectLanguage: (language: string) => void;
   selectedTheme: APP_THEME;
@@ -47,8 +51,6 @@ const Settings = (props: Props) => {
     theme: __theme__,
     lang: __lang__,
   } = props.translations;
-  const [open, setOpen] = React.useState(false);
-
   const swipe = React.useRef<Partial<{ swiping: boolean; x: number }>>({});
 
   const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
@@ -69,27 +71,30 @@ const Settings = (props: Props) => {
     const touch = e.changedTouches[0];
     const xDiff = touch.clientX - swipe.current.x;
     if (xDiff > 50) {
-      setOpen(true);
+      props.setSettingsStatus(true);
     }
     if (xDiff < -50) {
-      setOpen(false);
+      props.setSettingsStatus(false);
     }
     swipe.current = {};
   };
 
   return (
     <Styled.Container
-      open={open}
+      open={props.settingsOpen}
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
-      onClick={() => (!open ? setOpen(true) : {})}
+      onClick={() => (!props.settingsOpen ? props.setSettingsStatus(true) : {})}
     >
       <Styled.HeaderBar>
-        {open && <h1>{__settings__.title}</h1>}
-        <HamburgerMenu toggle={() => setOpen(!open)} open={open} />
+        {props.settingsOpen && <h1>{__settings__.title}</h1>}
+        <HamburgerMenu
+          toggle={() => props.setSettingsStatus(!props.settingsOpen)}
+          open={props.settingsOpen}
+        />
       </Styled.HeaderBar>
-      {open && (
+      {props.settingsOpen && (
         <React.Fragment>
           <Styled.Module>
             <ComboBox<APP_THEME>
@@ -110,6 +115,7 @@ const Settings = (props: Props) => {
                 .map(language => ({
                   key: language as LANGUAGES,
                   value: __lang__[language as LANGUAGES],
+                  extra: LANG_FLAG[language as LANGUAGES],
                 }))}
               setSelection={props.selectLanguage}
               selection={props.translations.getLanguage() as LANGUAGES}

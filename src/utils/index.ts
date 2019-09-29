@@ -24,6 +24,14 @@ export const COUNTRIES = countries as {
   };
 };
 
+export const LANG_FLAG: {
+  en: string;
+  fi: string;
+} = {
+  fi: '🇫🇮',
+  en: '🇬🇧',
+};
+
 export const FLAG_ISO_CODES_BY_REGION = REGIONS.filter(
   region => region !== 'world',
 ).reduce(

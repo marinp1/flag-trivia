@@ -21,6 +21,7 @@ function useForceUpdate() {
 }
 
 const App = () => {
+  const [settingsOpen, setSettingsStatus] = React.useState(false);
   const [theme, setTheme] = React.useState(currentTheme());
 
   const forceUpdate = useForceUpdate();
@@ -37,8 +38,10 @@ const App = () => {
   return (
     <ThemeProvider theme={theme.value}>
       <Global styles={globalStyle(theme.value)} />
-      <Styled.Container>
+      <Styled.Container settingsOpen={settingsOpen}>
         <Settings
+          settingsOpen={settingsOpen}
+          setSettingsStatus={setSettingsStatus}
           selectLanguage={changeLanguage}
           selectedTheme={theme.name}
           selectTheme={selectTheme}
@@ -49,7 +52,7 @@ const App = () => {
           <div
             style={{
               gridArea: 'content',
-              paddingBottom: '2rem',
+              padding: '0 2rem 2rem 2rem',
             }}
           >
             <Switch>

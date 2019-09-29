@@ -24,6 +24,7 @@ const getStylePerProps = (
 };
 
 const Container = styled.div<ContainerProps>`
+  z-index: 99;
   grid-area: settings;
   background: ${props => props.theme.colors.highlight};
   box-shadow: ${props => props.theme.boxShadow};
@@ -69,11 +70,10 @@ const Container = styled.div<ContainerProps>`
       display: block;
     }
   }
-
   width: ${props => getStylePerProps(props).width};
   ${breakpoints.tablet} {
-    display: block;
-    max-width: ${props => (props.open ? '350px' : undefined)};
+    position: relative;
+    max-width: ${props => (props.open ? '375px' : undefined)};
   }
 `;
 

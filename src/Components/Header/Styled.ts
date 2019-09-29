@@ -4,6 +4,8 @@ const Container = styled.div`
   grid-area: header;
   position: sticky;
   top: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
   background: ${props => props.theme.colors.background};
   padding-top: 2rem;
   h1 {
