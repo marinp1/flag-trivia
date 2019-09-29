@@ -17,7 +17,7 @@ const Selection = styled.div`
   font-weight: normal;
   padding: 1rem;
   border-bottom: 1px solid ${props => props.theme.colors.border};
-  background: ${props => props.theme.combobox.color1};
+  background: ${props => props.theme.elements.color1};
   &.selected {
     font-weight: bolder;
   }
@@ -31,7 +31,7 @@ const Selection = styled.div`
     border-bottom: none;
   }
   &:nth-child(2n + 1) {
-    background: ${props => props.theme.combobox.color2};
+    background: ${props => props.theme.elements.color2};
   }
   :hover {
     filter: brightness(95%);

@@ -11,7 +11,7 @@ export interface ITheme {
     background: React.CSSProperties['color'];
     highlight: React.CSSProperties['color'];
   };
-  combobox: {
+  elements: {
     color1: React.CSSProperties['color'];
     color2: React.CSSProperties['color'];
   };
@@ -27,13 +27,13 @@ const lightTheme: ITheme = {
     border: '#e1e1e1',
     highlight: '#fff',
   },
-  combobox: {
+  elements: {
     color1: '#f9f9f9',
     color2: '#e9e9e9',
   },
   borderRadius: '0.5rem',
   boxShadow: '0px 5px 10px 0px rgba(0,0,0,0.25)',
-  smallBoxShadow: undefined,
+  smallBoxShadow: '0px 1px 1px 0px rgba(0,0,0,0.05)',
 };
 
 const darkTheme: ITheme = {
@@ -43,9 +43,9 @@ const darkTheme: ITheme = {
     border: '#2E2E2A',
     highlight: '#333',
   },
-  combobox: {
-    color1: '#4A4A4A',
-    color2: '#575757',
+  elements: {
+    color1: '#575757',
+    color2: '#4A4A4A',
   },
   borderRadius: '0.5rem',
   boxShadow: '0px 5px 10px 0px rgba(0,0,0,0.25)',

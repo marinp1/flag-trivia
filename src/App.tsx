@@ -46,17 +46,24 @@ const App = () => {
         />
         <Styled.AppContainer>
           <Header />
-          <Switch>
-            <Route
-              path="/"
-              exact={true}
-              render={() => <Landing translations={translations} />}
-            />
-            <Route
-              path="/quiz"
-              render={() => <Game translations={translations} />}
-            />
-          </Switch>
+          <div
+            style={{
+              gridArea: 'content',
+              paddingBottom: '2rem',
+            }}
+          >
+            <Switch>
+              <Route
+                path="/"
+                exact={true}
+                render={() => <Landing translations={translations} />}
+              />
+              <Route
+                path="/quiz"
+                render={() => <Game translations={translations} />}
+              />
+            </Switch>
+          </div>
         </Styled.AppContainer>
       </Styled.Container>
     </ThemeProvider>

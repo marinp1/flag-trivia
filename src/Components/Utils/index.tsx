@@ -1,2 +1,4 @@
 import ComboBox from './ComboBox';
-export { ComboBox };
+import Button from './Button';
+
+export { ComboBox, Button };

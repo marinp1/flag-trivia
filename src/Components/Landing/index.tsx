@@ -3,7 +3,7 @@ import Styled from './Styled';
 
 import Translations from '../../translations';
 
-import { ComboBox } from '../Utils';
+import { Button, ComboBox } from '../Utils';
 
 import { REGIONS, GAME_MODES } from '../../utils';
 import { Region, GameMode } from '../../types';
@@ -14,24 +14,33 @@ const Landing = ({ translations }: { translations: typeof Translations }) => {
   const [selectedMode, selectMode] = React.useState<GameMode>('random');
   return (
     <Styled.Container>
-      <ComboBox<Region>
-        title={landing['select-region-label']}
-        selection={selectedRegion}
-        choices={REGIONS.map(region => ({
-          key: region,
-          value: landing.region[region],
-        }))}
-        setSelection={selectRegion}
-      />
-      <ComboBox<GameMode>
-        title={landing['select-mode-label']}
-        selection={selectedMode}
-        choices={GAME_MODES.map(gameMode => ({
-          key: gameMode,
-          value: landing.mode[gameMode],
-        }))}
-        setSelection={selectMode}
-      />
+      <Styled.GridCell name="region">
+        <ComboBox<Region>
+          title={landing['select-region-label']}
+          selection={selectedRegion}
+          choices={REGIONS.map(region => ({
+            key: region,
+            value: landing.region[region],
+          }))}
+          setSelection={selectRegion}
+        />
+      </Styled.GridCell>
+      <Styled.GridCell name="mode">
+        <ComboBox<GameMode>
+          title={landing['select-mode-label']}
+          selection={selectedMode}
+          choices={GAME_MODES.map(gameMode => ({
+            key: gameMode,
+            value: landing.mode[gameMode],
+          }))}
+          setSelection={selectMode}
+        />
+      </Styled.GridCell>
+      <Styled.ButtonCell name="button">
+        <Button onClick={() => console.log('Clicked')}>
+          {landing['start-new-game-label']}
+        </Button>
+      </Styled.ButtonCell>
     </Styled.Container>
   );
 };

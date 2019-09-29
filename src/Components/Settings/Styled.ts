@@ -24,7 +24,7 @@ const getStylePerProps = (
 };
 
 const Container = styled.div<ContainerProps>`
-  float: left;
+  grid-area: settings;
   background: ${props => props.theme.colors.highlight};
   box-shadow: ${props => props.theme.boxShadow};
   height: 100%;
@@ -36,7 +36,8 @@ const Container = styled.div<ContainerProps>`
     margin-right: 2rem;
   }
   .hamburger {
-    padding: 0;
+    align-self: flex-start;
+    padding: ${props => (props.open ? '15px 0' : '0')};
     display: ${props => (props.open ? 'block' : 'none')};
   }
 
