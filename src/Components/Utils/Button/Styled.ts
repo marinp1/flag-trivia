@@ -5,7 +5,6 @@ const Button = styled.button`
   border-radius: ${props => props.theme.borderRadius};
   box-shadow: ${props => props.theme.smallBoxShadow};
   background: ${props => props.theme.elements.color1};
-  box-shadow: ${props => props.theme.smallBoxShadow};
   padding: 1rem;
   box-sizing: border-box;
   font-weight: bold;
