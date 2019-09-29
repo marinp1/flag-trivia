@@ -35,6 +35,9 @@ const Landing = ({ translations }: { translations: typeof Translations }) => {
           }))}
           setSelection={selectMode}
         />
+        <Styled.GameModeInfo>
+          {landing['select-mode-info-label'][selectedMode]}
+        </Styled.GameModeInfo>
       </Styled.GridCell>
       <Styled.ButtonCell name="button">
         <Button onClick={() => console.log('Clicked')}>

@@ -22,6 +22,7 @@ interface IGameTranslation {
 
 interface IGeneralTranslation {
   'application-name': string;
+  'application-tagline': string;
   'loading-text': string;
 }
 

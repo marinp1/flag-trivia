@@ -1,12 +1,15 @@
 import React from 'react';
 import Styled from './Styled';
 
-const Header = () => {
+import Translations from '../../translations';
+
+const Header = ({ translations }: { translations: typeof Translations }) => {
+  const { general } = translations;
   return (
     <Styled.Container>
-      <h1>Flag Trivia</h1>
+      <h1>{general['application-name']}</h1>
       <h6>
-        <i>Test your flag knowledge</i>
+        <i>{general['application-tagline']}</i>
       </h6>
     </Styled.Container>
   );

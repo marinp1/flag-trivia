@@ -45,7 +45,7 @@ const App = () => {
           translations={translations}
         />
         <Styled.AppContainer>
-          <Header />
+          <Header translations={translations} />
           <div
             style={{
               gridArea: 'content',

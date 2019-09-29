@@ -43,8 +43,13 @@ const ButtonCell = styled.div<GridCellProps>`
   }
 `;
 
+const GameModeInfo = styled.h5`
+  padding-top: 1rem;
+`;
+
 export default {
   Container,
   GridCell,
   ButtonCell,
+  GameModeInfo,
 };

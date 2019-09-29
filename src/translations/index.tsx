@@ -7,6 +7,7 @@ const translations: ITranslation = new LocalizedStrings({
   en: {
     general: {
       'application-name': 'Flag Trivia',
+      'application-tagline': 'Test your flag knowledge',
       'loading-text': 'Loading...',
     },
     lang: {
@@ -54,6 +55,7 @@ const translations: ITranslation = new LocalizedStrings({
   fi: {
     general: {
       'application-name': 'Lipputrivia',
+      'application-tagline': 'Testaa lipputietämyksesi',
       'loading-text': 'Ladataan...',
     },
     lang: {
