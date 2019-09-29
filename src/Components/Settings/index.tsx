@@ -6,6 +6,8 @@ import Translations, { LANGUAGES } from '../../translations';
 
 import { ComboBox } from '../Utils';
 
+import './hamburgers.css';
+
 interface Props {
   translations: typeof Translations;
   selectLanguage: (language: string) => void;

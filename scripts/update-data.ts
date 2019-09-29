@@ -21,6 +21,14 @@ const countryNamePath = path.resolve(
   '../src/resources/countries.json',
 );
 
+interface CountryOutput {
+  region: string;
+  name: {
+    fi: string;
+    en: string;
+  };
+}
+
 fetch('https://restcountries.eu/rest/v2/all')
   .then(res => res.json())
   .then((countries: RestCountriesResult[]) => {
@@ -35,23 +43,34 @@ fetch('https://restcountries.eu/rest/v2/all')
         fs.writeFileSync(flagDirectory + '/' + flag.code + '.svg', flag.data);
       }
     });
+    let skipped = 0;
     const names = countries
       .map(country => ({
         [country.alpha2Code]: {
-          fi: finnishNames.countries[country.alpha2Code]
-            ? finnishNames.countries[country.alpha2Code].fi
-            : country.name,
-          en: country.name,
+          region: country.region ? country.region.toLowerCase() : '',
+          name: {
+            fi: finnishNames.countries[country.alpha2Code]
+              ? finnishNames.countries[country.alpha2Code].fi
+              : country.name,
+            en: country.name,
+          },
         },
       }))
-      .reduce(
-        (prev: any, cur: any) => ({
+      .reduce((prev: any, cur: { [val: string]: CountryOutput }) => {
+        const obj = Object.values(cur)[0];
+        if (!obj.region || obj.region === 'polar') {
+          console.log('Skipping', JSON.stringify(cur));
+          skipped++;
+          return prev;
+        }
+        return {
           ...prev,
           ...cur,
-        }),
-        {},
-      );
+        };
+      }, {});
     fs.writeFileSync(countryNamePath, JSON.stringify(names, null, 2));
     console.log('Index update successful!');
     console.log('Processed entries: ' + countries.length);
+    console.log('Saved entries: ' + (countries.length - skipped));
+    console.log('Skipped entries: ' + skipped);
   });

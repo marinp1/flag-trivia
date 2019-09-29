@@ -1,14 +1,19 @@
 import React from 'react';
+import { RouteComponentProps } from 'react-router';
 import Styled from './Styled';
 
 import Translations from '../../translations';
 
 import { Button, ComboBox } from '../Utils';
 
-import { REGIONS, GAME_MODES } from '../../utils';
+import { FLAG_ISO_CODES_BY_REGION, REGIONS, GAME_MODES } from '../../utils';
 import { Region, GameMode } from '../../types';
 
-const Landing = ({ translations }: { translations: typeof Translations }) => {
+type Props = {
+  translations: typeof Translations;
+} & RouteComponentProps;
+
+const Landing: React.FC<Props> = ({ translations, ...rest }) => {
   const { landing } = translations;
   const [selectedRegion, selectRegion] = React.useState<Region>('world');
   const [selectedMode, selectMode] = React.useState<GameMode>('random');
@@ -21,6 +26,7 @@ const Landing = ({ translations }: { translations: typeof Translations }) => {
           choices={REGIONS.map(region => ({
             key: region,
             value: landing.region[region],
+            extra: FLAG_ISO_CODES_BY_REGION[region].length,
           }))}
           setSelection={selectRegion}
         />
@@ -40,7 +46,11 @@ const Landing = ({ translations }: { translations: typeof Translations }) => {
         </Styled.GameModeInfo>
       </Styled.GridCell>
       <Styled.ButtonCell name="button">
-        <Button onClick={() => console.log('Clicked')}>
+        <Button
+          onClick={() =>
+            rest.history.push(`/quiz/${selectedMode}/${selectedRegion}`)
+          }
+        >
           {landing['start-new-game-label']}
         </Button>
       </Styled.ButtonCell>

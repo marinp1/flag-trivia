@@ -1,1002 +1,1731 @@
 {
   "AF": {
-    "fi": "Afganistan",
-    "en": "Afghanistan"
+    "region": "asia",
+    "name": {
+      "fi": "Afganistan",
+      "en": "Afghanistan"
+    }
   },
   "AX": {
-    "fi": "Ahvenanmaa",
-    "en": "Åland Islands"
+    "region": "europe",
+    "name": {
+      "fi": "Ahvenanmaa",
+      "en": "Åland Islands"
+    }
   },
   "AL": {
-    "fi": "Albania",
-    "en": "Albania"
+    "region": "europe",
+    "name": {
+      "fi": "Albania",
+      "en": "Albania"
+    }
   },
   "DZ": {
-    "fi": "Algeria",
-    "en": "Algeria"
+    "region": "africa",
+    "name": {
+      "fi": "Algeria",
+      "en": "Algeria"
+    }
   },
   "AS": {
-    "fi": "Amerikan Samoa",
-    "en": "American Samoa"
+    "region": "oceania",
+    "name": {
+      "fi": "Amerikan Samoa",
+      "en": "American Samoa"
+    }
   },
   "AD": {
-    "fi": "Andorra",
-    "en": "Andorra"
+    "region": "europe",
+    "name": {
+      "fi": "Andorra",
+      "en": "Andorra"
+    }
   },
   "AO": {
-    "fi": "Angola",
-    "en": "Angola"
+    "region": "africa",
+    "name": {
+      "fi": "Angola",
+      "en": "Angola"
+    }
   },
   "AI": {
-    "fi": "Anguilla",
-    "en": "Anguilla"
-  },
-  "AQ": {
-    "fi": "Antarktis",
-    "en": "Antarctica"
+    "region": "americas",
+    "name": {
+      "fi": "Anguilla",
+      "en": "Anguilla"
+    }
   },
   "AG": {
-    "fi": "Antigua ja Barbuda",
-    "en": "Antigua and Barbuda"
+    "region": "americas",
+    "name": {
+      "fi": "Antigua ja Barbuda",
+      "en": "Antigua and Barbuda"
+    }
   },
   "AR": {
-    "fi": "Argentiina",
-    "en": "Argentina"
+    "region": "americas",
+    "name": {
+      "fi": "Argentiina",
+      "en": "Argentina"
+    }
   },
   "AM": {
-    "fi": "Armenia",
-    "en": "Armenia"
+    "region": "asia",
+    "name": {
+      "fi": "Armenia",
+      "en": "Armenia"
+    }
   },
   "AW": {
-    "fi": "Aruba",
-    "en": "Aruba"
+    "region": "americas",
+    "name": {
+      "fi": "Aruba",
+      "en": "Aruba"
+    }
   },
   "AU": {
-    "fi": "Australia",
-    "en": "Australia"
+    "region": "oceania",
+    "name": {
+      "fi": "Australia",
+      "en": "Australia"
+    }
   },
   "AT": {
-    "fi": "Itävalta",
-    "en": "Austria"
+    "region": "europe",
+    "name": {
+      "fi": "Itävalta",
+      "en": "Austria"
+    }
   },
   "AZ": {
-    "fi": "Azerbaidžan",
-    "en": "Azerbaijan"
+    "region": "asia",
+    "name": {
+      "fi": "Azerbaidžan",
+      "en": "Azerbaijan"
+    }
   },
   "BS": {
-    "fi": "Bahama",
-    "en": "Bahamas"
+    "region": "americas",
+    "name": {
+      "fi": "Bahama",
+      "en": "Bahamas"
+    }
   },
   "BH": {
-    "fi": "Bahrain",
-    "en": "Bahrain"
+    "region": "asia",
+    "name": {
+      "fi": "Bahrain",
+      "en": "Bahrain"
+    }
   },
   "BD": {
-    "fi": "Bangladesh",
-    "en": "Bangladesh"
+    "region": "asia",
+    "name": {
+      "fi": "Bangladesh",
+      "en": "Bangladesh"
+    }
   },
   "BB": {
-    "fi": "Barbados",
-    "en": "Barbados"
+    "region": "americas",
+    "name": {
+      "fi": "Barbados",
+      "en": "Barbados"
+    }
   },
   "BY": {
-    "fi": "Valko-Venäjä",
-    "en": "Belarus"
+    "region": "europe",
+    "name": {
+      "fi": "Valko-Venäjä",
+      "en": "Belarus"
+    }
   },
   "BE": {
-    "fi": "Belgia",
-    "en": "Belgium"
+    "region": "europe",
+    "name": {
+      "fi": "Belgia",
+      "en": "Belgium"
+    }
   },
   "BZ": {
-    "fi": "Belize",
-    "en": "Belize"
+    "region": "americas",
+    "name": {
+      "fi": "Belize",
+      "en": "Belize"
+    }
   },
   "BJ": {
-    "fi": "Benin",
-    "en": "Benin"
+    "region": "africa",
+    "name": {
+      "fi": "Benin",
+      "en": "Benin"
+    }
   },
   "BM": {
-    "fi": "Bermuda",
-    "en": "Bermuda"
+    "region": "americas",
+    "name": {
+      "fi": "Bermuda",
+      "en": "Bermuda"
+    }
   },
   "BT": {
-    "fi": "Bhutan",
-    "en": "Bhutan"
+    "region": "asia",
+    "name": {
+      "fi": "Bhutan",
+      "en": "Bhutan"
+    }
   },
   "BO": {
-    "fi": "Bolivia",
-    "en": "Bolivia (Plurinational State of)"
+    "region": "americas",
+    "name": {
+      "fi": "Bolivia",
+      "en": "Bolivia (Plurinational State of)"
+    }
   },
   "BQ": {
-    "fi": "Bonaire, Sint Eustatius ja Saba",
-    "en": "Bonaire, Sint Eustatius and Saba"
+    "region": "americas",
+    "name": {
+      "fi": "Bonaire, Sint Eustatius ja Saba",
+      "en": "Bonaire, Sint Eustatius and Saba"
+    }
   },
   "BA": {
-    "fi": "Bosnia ja Hertsegovina",
-    "en": "Bosnia and Herzegovina"
+    "region": "europe",
+    "name": {
+      "fi": "Bosnia ja Hertsegovina",
+      "en": "Bosnia and Herzegovina"
+    }
   },
   "BW": {
-    "fi": "Botswana",
-    "en": "Botswana"
-  },
-  "BV": {
-    "fi": "Bouvet’nsaari",
-    "en": "Bouvet Island"
+    "region": "africa",
+    "name": {
+      "fi": "Botswana",
+      "en": "Botswana"
+    }
   },
   "BR": {
-    "fi": "Brasilia",
-    "en": "Brazil"
+    "region": "americas",
+    "name": {
+      "fi": "Brasilia",
+      "en": "Brazil"
+    }
   },
   "IO": {
-    "fi": "Brittiläinen Intian valtameren alue",
-    "en": "British Indian Ocean Territory"
+    "region": "africa",
+    "name": {
+      "fi": "Brittiläinen Intian valtameren alue",
+      "en": "British Indian Ocean Territory"
+    }
   },
   "UM": {
-    "fi": "Yhdysvaltain pienet erillissaaret",
-    "en": "United States Minor Outlying Islands"
+    "region": "americas",
+    "name": {
+      "fi": "Yhdysvaltain pienet erillissaaret",
+      "en": "United States Minor Outlying Islands"
+    }
   },
   "VG": {
-    "fi": "Brittiläiset Neitsytsaaret",
-    "en": "Virgin Islands (British)"
+    "region": "americas",
+    "name": {
+      "fi": "Brittiläiset Neitsytsaaret",
+      "en": "Virgin Islands (British)"
+    }
   },
   "VI": {
-    "fi": "Yhdysvaltain Neitsytsaaret",
-    "en": "Virgin Islands (U.S.)"
+    "region": "americas",
+    "name": {
+      "fi": "Yhdysvaltain Neitsytsaaret",
+      "en": "Virgin Islands (U.S.)"
+    }
   },
   "BN": {
-    "fi": "Brunei",
-    "en": "Brunei Darussalam"
+    "region": "asia",
+    "name": {
+      "fi": "Brunei",
+      "en": "Brunei Darussalam"
+    }
   },
   "BG": {
-    "fi": "Bulgaria",
-    "en": "Bulgaria"
+    "region": "europe",
+    "name": {
+      "fi": "Bulgaria",
+      "en": "Bulgaria"
+    }
   },
   "BF": {
-    "fi": "Burkina Faso",
-    "en": "Burkina Faso"
+    "region": "africa",
+    "name": {
+      "fi": "Burkina Faso",
+      "en": "Burkina Faso"
+    }
   },
   "BI": {
-    "fi": "Burundi",
-    "en": "Burundi"
+    "region": "africa",
+    "name": {
+      "fi": "Burundi",
+      "en": "Burundi"
+    }
   },
   "KH": {
-    "fi": "Kambodža",
-    "en": "Cambodia"
+    "region": "asia",
+    "name": {
+      "fi": "Kambodža",
+      "en": "Cambodia"
+    }
   },
   "CM": {
-    "fi": "Kamerun",
-    "en": "Cameroon"
+    "region": "africa",
+    "name": {
+      "fi": "Kamerun",
+      "en": "Cameroon"
+    }
   },
   "CA": {
-    "fi": "Kanada",
-    "en": "Canada"
+    "region": "americas",
+    "name": {
+      "fi": "Kanada",
+      "en": "Canada"
+    }
   },
   "CV": {
-    "fi": "Kap Verde",
-    "en": "Cabo Verde"
+    "region": "africa",
+    "name": {
+      "fi": "Kap Verde",
+      "en": "Cabo Verde"
+    }
   },
   "KY": {
-    "fi": "Caymansaaret",
-    "en": "Cayman Islands"
+    "region": "americas",
+    "name": {
+      "fi": "Caymansaaret",
+      "en": "Cayman Islands"
+    }
   },
   "CF": {
-    "fi": "Keski-Afrikan tasavalta",
-    "en": "Central African Republic"
+    "region": "africa",
+    "name": {
+      "fi": "Keski-Afrikan tasavalta",
+      "en": "Central African Republic"
+    }
   },
   "TD": {
-    "fi": "Tšad",
-    "en": "Chad"
+    "region": "africa",
+    "name": {
+      "fi": "Tšad",
+      "en": "Chad"
+    }
   },
   "CL": {
-    "fi": "Chile",
-    "en": "Chile"
+    "region": "americas",
+    "name": {
+      "fi": "Chile",
+      "en": "Chile"
+    }
   },
   "CN": {
-    "fi": "Kiina",
-    "en": "China"
+    "region": "asia",
+    "name": {
+      "fi": "Kiina",
+      "en": "China"
+    }
   },
   "CX": {
-    "fi": "Joulusaari",
-    "en": "Christmas Island"
+    "region": "oceania",
+    "name": {
+      "fi": "Joulusaari",
+      "en": "Christmas Island"
+    }
   },
   "CC": {
-    "fi": "Kookossaaret",
-    "en": "Cocos (Keeling) Islands"
+    "region": "oceania",
+    "name": {
+      "fi": "Kookossaaret",
+      "en": "Cocos (Keeling) Islands"
+    }
   },
   "CO": {
-    "fi": "Kolumbia",
-    "en": "Colombia"
+    "region": "americas",
+    "name": {
+      "fi": "Kolumbia",
+      "en": "Colombia"
+    }
   },
   "KM": {
-    "fi": "Komorit",
-    "en": "Comoros"
+    "region": "africa",
+    "name": {
+      "fi": "Komorit",
+      "en": "Comoros"
+    }
   },
   "CG": {
-    "fi": "Kongo (Kongo-Brazzaville)",
-    "en": "Congo"
+    "region": "africa",
+    "name": {
+      "fi": "Kongo (Kongo-Brazzaville)",
+      "en": "Congo"
+    }
   },
   "CD": {
-    "fi": "Kongo (Kongo-Kinshasa)",
-    "en": "Congo (Democratic Republic of the)"
+    "region": "africa",
+    "name": {
+      "fi": "Kongo (Kongo-Kinshasa)",
+      "en": "Congo (Democratic Republic of the)"
+    }
   },
   "CK": {
-    "fi": "Cookinsaaret",
-    "en": "Cook Islands"
+    "region": "oceania",
+    "name": {
+      "fi": "Cookinsaaret",
+      "en": "Cook Islands"
+    }
   },
   "CR": {
-    "fi": "Costa Rica",
-    "en": "Costa Rica"
+    "region": "americas",
+    "name": {
+      "fi": "Costa Rica",
+      "en": "Costa Rica"
+    }
   },
   "HR": {
-    "fi": "Kroatia",
-    "en": "Croatia"
+    "region": "europe",
+    "name": {
+      "fi": "Kroatia",
+      "en": "Croatia"
+    }
   },
   "CU": {
-    "fi": "Kuuba",
-    "en": "Cuba"
+    "region": "americas",
+    "name": {
+      "fi": "Kuuba",
+      "en": "Cuba"
+    }
   },
   "CW": {
-    "fi": "Curaçao",
-    "en": "Curaçao"
+    "region": "americas",
+    "name": {
+      "fi": "Curaçao",
+      "en": "Curaçao"
+    }
   },
   "CY": {
-    "fi": "Kypros",
-    "en": "Cyprus"
+    "region": "europe",
+    "name": {
+      "fi": "Kypros",
+      "en": "Cyprus"
+    }
   },
   "CZ": {
-    "fi": "Tšekki",
-    "en": "Czech Republic"
+    "region": "europe",
+    "name": {
+      "fi": "Tšekki",
+      "en": "Czech Republic"
+    }
   },
   "DK": {
-    "fi": "Tanska",
-    "en": "Denmark"
+    "region": "europe",
+    "name": {
+      "fi": "Tanska",
+      "en": "Denmark"
+    }
   },
   "DJ": {
-    "fi": "Djibouti",
-    "en": "Djibouti"
+    "region": "africa",
+    "name": {
+      "fi": "Djibouti",
+      "en": "Djibouti"
+    }
   },
   "DM": {
-    "fi": "Dominica",
-    "en": "Dominica"
+    "region": "americas",
+    "name": {
+      "fi": "Dominica",
+      "en": "Dominica"
+    }
   },
   "DO": {
-    "fi": "Dominikaaninen tasavalta",
-    "en": "Dominican Republic"
+    "region": "americas",
+    "name": {
+      "fi": "Dominikaaninen tasavalta",
+      "en": "Dominican Republic"
+    }
   },
   "EC": {
-    "fi": "Ecuador",
-    "en": "Ecuador"
+    "region": "americas",
+    "name": {
+      "fi": "Ecuador",
+      "en": "Ecuador"
+    }
   },
   "EG": {
-    "fi": "Egypti",
-    "en": "Egypt"
+    "region": "africa",
+    "name": {
+      "fi": "Egypti",
+      "en": "Egypt"
+    }
   },
   "SV": {
-    "fi": "El Salvador",
-    "en": "El Salvador"
+    "region": "americas",
+    "name": {
+      "fi": "El Salvador",
+      "en": "El Salvador"
+    }
   },
   "GQ": {
-    "fi": "Päiväntasaajan Guinea",
-    "en": "Equatorial Guinea"
+    "region": "africa",
+    "name": {
+      "fi": "Päiväntasaajan Guinea",
+      "en": "Equatorial Guinea"
+    }
   },
   "ER": {
-    "fi": "Eritrea",
-    "en": "Eritrea"
+    "region": "africa",
+    "name": {
+      "fi": "Eritrea",
+      "en": "Eritrea"
+    }
   },
   "EE": {
-    "fi": "Viro",
-    "en": "Estonia"
+    "region": "europe",
+    "name": {
+      "fi": "Viro",
+      "en": "Estonia"
+    }
   },
   "ET": {
-    "fi": "Suomi",
-    "en": "Ethiopia"
+    "region": "africa",
+    "name": {
+      "fi": "Suomi",
+      "en": "Ethiopia"
+    }
   },
   "FK": {
-    "fi": "Falklandinsaaret",
-    "en": "Falkland Islands (Malvinas)"
+    "region": "americas",
+    "name": {
+      "fi": "Falklandinsaaret",
+      "en": "Falkland Islands (Malvinas)"
+    }
   },
   "FO": {
-    "fi": "Färsaaret",
-    "en": "Faroe Islands"
+    "region": "europe",
+    "name": {
+      "fi": "Färsaaret",
+      "en": "Faroe Islands"
+    }
   },
   "FJ": {
-    "fi": "Fidži",
-    "en": "Fiji"
+    "region": "oceania",
+    "name": {
+      "fi": "Fidži",
+      "en": "Fiji"
+    }
   },
   "FI": {
-    "fi": "Finland",
-    "en": "Finland"
+    "region": "europe",
+    "name": {
+      "fi": "Finland",
+      "en": "Finland"
+    }
   },
   "FR": {
-    "fi": "Ranska",
-    "en": "France"
+    "region": "europe",
+    "name": {
+      "fi": "Ranska",
+      "en": "France"
+    }
   },
   "GF": {
-    "fi": "Ranskan Guayana",
-    "en": "French Guiana"
+    "region": "americas",
+    "name": {
+      "fi": "Ranskan Guayana",
+      "en": "French Guiana"
+    }
   },
   "PF": {
-    "fi": "Ranskan Polynesia",
-    "en": "French Polynesia"
+    "region": "oceania",
+    "name": {
+      "fi": "Ranskan Polynesia",
+      "en": "French Polynesia"
+    }
   },
   "TF": {
-    "fi": "Ranskan eteläiset alueet",
-    "en": "French Southern Territories"
+    "region": "africa",
+    "name": {
+      "fi": "Ranskan eteläiset alueet",
+      "en": "French Southern Territories"
+    }
   },
   "GA": {
-    "fi": "Gabon",
-    "en": "Gabon"
+    "region": "africa",
+    "name": {
+      "fi": "Gabon",
+      "en": "Gabon"
+    }
   },
   "GM": {
-    "fi": "Gambia",
-    "en": "Gambia"
+    "region": "africa",
+    "name": {
+      "fi": "Gambia",
+      "en": "Gambia"
+    }
   },
   "GE": {
-    "fi": "Georgia",
-    "en": "Georgia"
+    "region": "asia",
+    "name": {
+      "fi": "Georgia",
+      "en": "Georgia"
+    }
   },
   "DE": {
-    "fi": "Saksa",
-    "en": "Germany"
+    "region": "europe",
+    "name": {
+      "fi": "Saksa",
+      "en": "Germany"
+    }
   },
   "GH": {
-    "fi": "Ghana",
-    "en": "Ghana"
+    "region": "africa",
+    "name": {
+      "fi": "Ghana",
+      "en": "Ghana"
+    }
   },
   "GI": {
-    "fi": "Gibraltar",
-    "en": "Gibraltar"
+    "region": "europe",
+    "name": {
+      "fi": "Gibraltar",
+      "en": "Gibraltar"
+    }
   },
   "GR": {
-    "fi": "Kreikka",
-    "en": "Greece"
+    "region": "europe",
+    "name": {
+      "fi": "Kreikka",
+      "en": "Greece"
+    }
   },
   "GL": {
-    "fi": "Grönlanti",
-    "en": "Greenland"
+    "region": "americas",
+    "name": {
+      "fi": "Grönlanti",
+      "en": "Greenland"
+    }
   },
   "GD": {
-    "fi": "Grenada",
-    "en": "Grenada"
+    "region": "americas",
+    "name": {
+      "fi": "Grenada",
+      "en": "Grenada"
+    }
   },
   "GP": {
-    "fi": "Guadeloupe",
-    "en": "Guadeloupe"
+    "region": "americas",
+    "name": {
+      "fi": "Guadeloupe",
+      "en": "Guadeloupe"
+    }
   },
   "GU": {
-    "fi": "Guam",
-    "en": "Guam"
+    "region": "oceania",
+    "name": {
+      "fi": "Guam",
+      "en": "Guam"
+    }
   },
   "GT": {
-    "fi": "Guatemala",
-    "en": "Guatemala"
+    "region": "americas",
+    "name": {
+      "fi": "Guatemala",
+      "en": "Guatemala"
+    }
   },
   "GG": {
-    "fi": "Guernsey",
-    "en": "Guernsey"
+    "region": "europe",
+    "name": {
+      "fi": "Guernsey",
+      "en": "Guernsey"
+    }
   },
   "GN": {
-    "fi": "Guinea",
-    "en": "Guinea"
+    "region": "africa",
+    "name": {
+      "fi": "Guinea",
+      "en": "Guinea"
+    }
   },
   "GW": {
-    "fi": "Guinea-Bissau",
-    "en": "Guinea-Bissau"
+    "region": "africa",
+    "name": {
+      "fi": "Guinea-Bissau",
+      "en": "Guinea-Bissau"
+    }
   },
   "GY": {
-    "fi": "Guyana",
-    "en": "Guyana"
+    "region": "americas",
+    "name": {
+      "fi": "Guyana",
+      "en": "Guyana"
+    }
   },
   "HT": {
-    "fi": "Haiti",
-    "en": "Haiti"
-  },
-  "HM": {
-    "fi": "Heard ja McDonaldinsaaret",
-    "en": "Heard Island and McDonald Islands"
+    "region": "americas",
+    "name": {
+      "fi": "Haiti",
+      "en": "Haiti"
+    }
   },
   "VA": {
-    "fi": "Vatikaani",
-    "en": "Holy See"
+    "region": "europe",
+    "name": {
+      "fi": "Vatikaani",
+      "en": "Holy See"
+    }
   },
   "HN": {
-    "fi": "Honduras",
-    "en": "Honduras"
+    "region": "americas",
+    "name": {
+      "fi": "Honduras",
+      "en": "Honduras"
+    }
   },
   "HK": {
-    "fi": "Hongkong",
-    "en": "Hong Kong"
+    "region": "asia",
+    "name": {
+      "fi": "Hongkong",
+      "en": "Hong Kong"
+    }
   },
   "HU": {
-    "fi": "Unkari",
-    "en": "Hungary"
+    "region": "europe",
+    "name": {
+      "fi": "Unkari",
+      "en": "Hungary"
+    }
   },
   "IS": {
-    "fi": "Islanti",
-    "en": "Iceland"
+    "region": "europe",
+    "name": {
+      "fi": "Islanti",
+      "en": "Iceland"
+    }
   },
   "IN": {
-    "fi": "Intia",
-    "en": "India"
+    "region": "asia",
+    "name": {
+      "fi": "Intia",
+      "en": "India"
+    }
   },
   "ID": {
-    "fi": "Indonesia",
-    "en": "Indonesia"
+    "region": "asia",
+    "name": {
+      "fi": "Indonesia",
+      "en": "Indonesia"
+    }
   },
   "CI": {
-    "fi": "Norsunluurannikko",
-    "en": "Côte d'Ivoire"
+    "region": "africa",
+    "name": {
+      "fi": "Norsunluurannikko",
+      "en": "Côte d'Ivoire"
+    }
   },
   "IR": {
-    "fi": "Iran",
-    "en": "Iran (Islamic Republic of)"
+    "region": "asia",
+    "name": {
+      "fi": "Iran",
+      "en": "Iran (Islamic Republic of)"
+    }
   },
   "IQ": {
-    "fi": "Irak",
-    "en": "Iraq"
+    "region": "asia",
+    "name": {
+      "fi": "Irak",
+      "en": "Iraq"
+    }
   },
   "IE": {
-    "fi": "Irlanti",
-    "en": "Ireland"
+    "region": "europe",
+    "name": {
+      "fi": "Irlanti",
+      "en": "Ireland"
+    }
   },
   "IM": {
-    "fi": "Mansaari",
-    "en": "Isle of Man"
+    "region": "europe",
+    "name": {
+      "fi": "Mansaari",
+      "en": "Isle of Man"
+    }
   },
   "IL": {
-    "fi": "Israel",
-    "en": "Israel"
+    "region": "asia",
+    "name": {
+      "fi": "Israel",
+      "en": "Israel"
+    }
   },
   "IT": {
-    "fi": "Italia",
-    "en": "Italy"
+    "region": "europe",
+    "name": {
+      "fi": "Italia",
+      "en": "Italy"
+    }
   },
   "JM": {
-    "fi": "Jamaika",
-    "en": "Jamaica"
+    "region": "americas",
+    "name": {
+      "fi": "Jamaika",
+      "en": "Jamaica"
+    }
   },
   "JP": {
-    "fi": "Japani",
-    "en": "Japan"
+    "region": "asia",
+    "name": {
+      "fi": "Japani",
+      "en": "Japan"
+    }
   },
   "JE": {
-    "fi": "Jersey",
-    "en": "Jersey"
+    "region": "europe",
+    "name": {
+      "fi": "Jersey",
+      "en": "Jersey"
+    }
   },
   "JO": {
-    "fi": "Jordania",
-    "en": "Jordan"
+    "region": "asia",
+    "name": {
+      "fi": "Jordania",
+      "en": "Jordan"
+    }
   },
   "KZ": {
-    "fi": "Kazakstan",
-    "en": "Kazakhstan"
+    "region": "asia",
+    "name": {
+      "fi": "Kazakstan",
+      "en": "Kazakhstan"
+    }
   },
   "KE": {
-    "fi": "Kenia",
-    "en": "Kenya"
+    "region": "africa",
+    "name": {
+      "fi": "Kenia",
+      "en": "Kenya"
+    }
   },
   "KI": {
-    "fi": "Kiribati",
-    "en": "Kiribati"
+    "region": "oceania",
+    "name": {
+      "fi": "Kiribati",
+      "en": "Kiribati"
+    }
   },
   "KW": {
-    "fi": "Kuwait",
-    "en": "Kuwait"
+    "region": "asia",
+    "name": {
+      "fi": "Kuwait",
+      "en": "Kuwait"
+    }
   },
   "KG": {
-    "fi": "Kirgisia",
-    "en": "Kyrgyzstan"
+    "region": "asia",
+    "name": {
+      "fi": "Kirgisia",
+      "en": "Kyrgyzstan"
+    }
   },
   "LA": {
-    "fi": "Laos",
-    "en": "Lao People's Democratic Republic"
+    "region": "asia",
+    "name": {
+      "fi": "Laos",
+      "en": "Lao People's Democratic Republic"
+    }
   },
   "LV": {
-    "fi": "Latvia",
-    "en": "Latvia"
+    "region": "europe",
+    "name": {
+      "fi": "Latvia",
+      "en": "Latvia"
+    }
   },
   "LB": {
-    "fi": "Libanon",
-    "en": "Lebanon"
+    "region": "asia",
+    "name": {
+      "fi": "Libanon",
+      "en": "Lebanon"
+    }
   },
   "LS": {
-    "fi": "Lesotho",
-    "en": "Lesotho"
+    "region": "africa",
+    "name": {
+      "fi": "Lesotho",
+      "en": "Lesotho"
+    }
   },
   "LR": {
-    "fi": "Liberia",
-    "en": "Liberia"
+    "region": "africa",
+    "name": {
+      "fi": "Liberia",
+      "en": "Liberia"
+    }
   },
   "LY": {
-    "fi": "Libya",
-    "en": "Libya"
+    "region": "africa",
+    "name": {
+      "fi": "Libya",
+      "en": "Libya"
+    }
   },
   "LI": {
-    "fi": "Liechtenstein",
-    "en": "Liechtenstein"
+    "region": "europe",
+    "name": {
+      "fi": "Liechtenstein",
+      "en": "Liechtenstein"
+    }
   },
   "LT": {
-    "fi": "Liettua",
-    "en": "Lithuania"
+    "region": "europe",
+    "name": {
+      "fi": "Liettua",
+      "en": "Lithuania"
+    }
   },
   "LU": {
-    "fi": "Luxemburg",
-    "en": "Luxembourg"
+    "region": "europe",
+    "name": {
+      "fi": "Luxemburg",
+      "en": "Luxembourg"
+    }
   },
   "MO": {
-    "fi": "Macao",
-    "en": "Macao"
+    "region": "asia",
+    "name": {
+      "fi": "Macao",
+      "en": "Macao"
+    }
   },
   "MK": {
-    "fi": "Makedonia",
-    "en": "Macedonia (the former Yugoslav Republic of)"
+    "region": "europe",
+    "name": {
+      "fi": "Makedonia",
+      "en": "Macedonia (the former Yugoslav Republic of)"
+    }
   },
   "MG": {
-    "fi": "Madagaskar",
-    "en": "Madagascar"
+    "region": "africa",
+    "name": {
+      "fi": "Madagaskar",
+      "en": "Madagascar"
+    }
   },
   "MW": {
-    "fi": "Malawi",
-    "en": "Malawi"
+    "region": "africa",
+    "name": {
+      "fi": "Malawi",
+      "en": "Malawi"
+    }
   },
   "MY": {
-    "fi": "Malesia",
-    "en": "Malaysia"
+    "region": "asia",
+    "name": {
+      "fi": "Malesia",
+      "en": "Malaysia"
+    }
   },
   "MV": {
-    "fi": "Malediivit",
-    "en": "Maldives"
+    "region": "asia",
+    "name": {
+      "fi": "Malediivit",
+      "en": "Maldives"
+    }
   },
   "ML": {
-    "fi": "Mali",
-    "en": "Mali"
+    "region": "africa",
+    "name": {
+      "fi": "Mali",
+      "en": "Mali"
+    }
   },
   "MT": {
-    "fi": "Malta",
-    "en": "Malta"
+    "region": "europe",
+    "name": {
+      "fi": "Malta",
+      "en": "Malta"
+    }
   },
   "MH": {
-    "fi": "Marshallinsaaret",
-    "en": "Marshall Islands"
+    "region": "oceania",
+    "name": {
+      "fi": "Marshallinsaaret",
+      "en": "Marshall Islands"
+    }
   },
   "MQ": {
-    "fi": "Martinique",
-    "en": "Martinique"
+    "region": "americas",
+    "name": {
+      "fi": "Martinique",
+      "en": "Martinique"
+    }
   },
   "MR": {
-    "fi": "Mauritania",
-    "en": "Mauritania"
+    "region": "africa",
+    "name": {
+      "fi": "Mauritania",
+      "en": "Mauritania"
+    }
   },
   "MU": {
-    "fi": "Mauritius",
-    "en": "Mauritius"
+    "region": "africa",
+    "name": {
+      "fi": "Mauritius",
+      "en": "Mauritius"
+    }
   },
   "YT": {
-    "fi": "Mayotte",
-    "en": "Mayotte"
+    "region": "africa",
+    "name": {
+      "fi": "Mayotte",
+      "en": "Mayotte"
+    }
   },
   "MX": {
-    "fi": "Meksiko",
-    "en": "Mexico"
+    "region": "americas",
+    "name": {
+      "fi": "Meksiko",
+      "en": "Mexico"
+    }
   },
   "FM": {
-    "fi": "Mikronesia",
-    "en": "Micronesia (Federated States of)"
+    "region": "oceania",
+    "name": {
+      "fi": "Mikronesia",
+      "en": "Micronesia (Federated States of)"
+    }
   },
   "MD": {
-    "fi": "Moldova",
-    "en": "Moldova (Republic of)"
+    "region": "europe",
+    "name": {
+      "fi": "Moldova",
+      "en": "Moldova (Republic of)"
+    }
   },
   "MC": {
-    "fi": "Monaco",
-    "en": "Monaco"
+    "region": "europe",
+    "name": {
+      "fi": "Monaco",
+      "en": "Monaco"
+    }
   },
   "MN": {
-    "fi": "Mongolia",
-    "en": "Mongolia"
+    "region": "asia",
+    "name": {
+      "fi": "Mongolia",
+      "en": "Mongolia"
+    }
   },
   "ME": {
-    "fi": "Montenegro",
-    "en": "Montenegro"
+    "region": "europe",
+    "name": {
+      "fi": "Montenegro",
+      "en": "Montenegro"
+    }
   },
   "MS": {
-    "fi": "Montserrat",
-    "en": "Montserrat"
+    "region": "americas",
+    "name": {
+      "fi": "Montserrat",
+      "en": "Montserrat"
+    }
   },
   "MA": {
-    "fi": "Marokko",
-    "en": "Morocco"
+    "region": "africa",
+    "name": {
+      "fi": "Marokko",
+      "en": "Morocco"
+    }
   },
   "MZ": {
-    "fi": "Mosambik",
-    "en": "Mozambique"
+    "region": "africa",
+    "name": {
+      "fi": "Mosambik",
+      "en": "Mozambique"
+    }
   },
   "MM": {
-    "fi": "Myanmar",
-    "en": "Myanmar"
+    "region": "asia",
+    "name": {
+      "fi": "Myanmar",
+      "en": "Myanmar"
+    }
   },
   "NA": {
-    "fi": "Namibia",
-    "en": "Namibia"
+    "region": "africa",
+    "name": {
+      "fi": "Namibia",
+      "en": "Namibia"
+    }
   },
   "NR": {
-    "fi": "Nauru",
-    "en": "Nauru"
+    "region": "oceania",
+    "name": {
+      "fi": "Nauru",
+      "en": "Nauru"
+    }
   },
   "NP": {
-    "fi": "Nepal",
-    "en": "Nepal"
+    "region": "asia",
+    "name": {
+      "fi": "Nepal",
+      "en": "Nepal"
+    }
   },
   "NL": {
-    "fi": "Alankomaat",
-    "en": "Netherlands"
+    "region": "europe",
+    "name": {
+      "fi": "Alankomaat",
+      "en": "Netherlands"
+    }
   },
   "NC": {
-    "fi": "Uusi-Kaledonia",
-    "en": "New Caledonia"
+    "region": "oceania",
+    "name": {
+      "fi": "Uusi-Kaledonia",
+      "en": "New Caledonia"
+    }
   },
   "NZ": {
-    "fi": "Uusi-Seelanti",
-    "en": "New Zealand"
+    "region": "oceania",
+    "name": {
+      "fi": "Uusi-Seelanti",
+      "en": "New Zealand"
+    }
   },
   "NI": {
-    "fi": "Nicaragua",
-    "en": "Nicaragua"
+    "region": "americas",
+    "name": {
+      "fi": "Nicaragua",
+      "en": "Nicaragua"
+    }
   },
   "NE": {
-    "fi": "Niger",
-    "en": "Niger"
+    "region": "africa",
+    "name": {
+      "fi": "Niger",
+      "en": "Niger"
+    }
   },
   "NG": {
-    "fi": "Nigeria",
-    "en": "Nigeria"
+    "region": "africa",
+    "name": {
+      "fi": "Nigeria",
+      "en": "Nigeria"
+    }
   },
   "NU": {
-    "fi": "Niue",
-    "en": "Niue"
+    "region": "oceania",
+    "name": {
+      "fi": "Niue",
+      "en": "Niue"
+    }
   },
   "NF": {
-    "fi": "Norfolkinsaari",
-    "en": "Norfolk Island"
+    "region": "oceania",
+    "name": {
+      "fi": "Norfolkinsaari",
+      "en": "Norfolk Island"
+    }
   },
   "KP": {
-    "fi": "Korean demokraattinen kansantasavalta (Pohjois-Korea)",
-    "en": "Korea (Democratic People's Republic of)"
+    "region": "asia",
+    "name": {
+      "fi": "Korean demokraattinen kansantasavalta (Pohjois-Korea)",
+      "en": "Korea (Democratic People's Republic of)"
+    }
   },
   "MP": {
-    "fi": "Pohjois-Mariaanit",
-    "en": "Northern Mariana Islands"
+    "region": "oceania",
+    "name": {
+      "fi": "Pohjois-Mariaanit",
+      "en": "Northern Mariana Islands"
+    }
   },
   "NO": {
-    "fi": "Norway",
-    "en": "Norway"
+    "region": "europe",
+    "name": {
+      "fi": "Norway",
+      "en": "Norway"
+    }
   },
   "OM": {
-    "fi": "Oman",
-    "en": "Oman"
+    "region": "asia",
+    "name": {
+      "fi": "Oman",
+      "en": "Oman"
+    }
   },
   "PK": {
-    "fi": "Pakistan",
-    "en": "Pakistan"
+    "region": "asia",
+    "name": {
+      "fi": "Pakistan",
+      "en": "Pakistan"
+    }
   },
   "PW": {
-    "fi": "Palau",
-    "en": "Palau"
+    "region": "oceania",
+    "name": {
+      "fi": "Palau",
+      "en": "Palau"
+    }
   },
   "PS": {
-    "fi": "Palestiinan valtio",
-    "en": "Palestine, State of"
+    "region": "asia",
+    "name": {
+      "fi": "Palestiinan valtio",
+      "en": "Palestine, State of"
+    }
   },
   "PA": {
-    "fi": "Panama",
-    "en": "Panama"
+    "region": "americas",
+    "name": {
+      "fi": "Panama",
+      "en": "Panama"
+    }
   },
   "PG": {
-    "fi": "Papua-Uusi-Guinea",
-    "en": "Papua New Guinea"
+    "region": "oceania",
+    "name": {
+      "fi": "Papua-Uusi-Guinea",
+      "en": "Papua New Guinea"
+    }
   },
   "PY": {
-    "fi": "Paraguay",
-    "en": "Paraguay"
+    "region": "americas",
+    "name": {
+      "fi": "Paraguay",
+      "en": "Paraguay"
+    }
   },
   "PE": {
-    "fi": "Peru",
-    "en": "Peru"
+    "region": "americas",
+    "name": {
+      "fi": "Peru",
+      "en": "Peru"
+    }
   },
   "PH": {
-    "fi": "Filippiinit",
-    "en": "Philippines"
+    "region": "asia",
+    "name": {
+      "fi": "Filippiinit",
+      "en": "Philippines"
+    }
   },
   "PN": {
-    "fi": "Pitcairn",
-    "en": "Pitcairn"
+    "region": "oceania",
+    "name": {
+      "fi": "Pitcairn",
+      "en": "Pitcairn"
+    }
   },
   "PL": {
-    "fi": "Puola",
-    "en": "Poland"
+    "region": "europe",
+    "name": {
+      "fi": "Puola",
+      "en": "Poland"
+    }
   },
   "PT": {
-    "fi": "Portugali",
-    "en": "Portugal"
+    "region": "europe",
+    "name": {
+      "fi": "Portugali",
+      "en": "Portugal"
+    }
   },
   "PR": {
-    "fi": "Puerto Rico",
-    "en": "Puerto Rico"
+    "region": "americas",
+    "name": {
+      "fi": "Puerto Rico",
+      "en": "Puerto Rico"
+    }
   },
   "QA": {
-    "fi": "Qatar",
-    "en": "Qatar"
+    "region": "asia",
+    "name": {
+      "fi": "Qatar",
+      "en": "Qatar"
+    }
   },
   "XK": {
-    "fi": "Republic of Kosovo",
-    "en": "Republic of Kosovo"
+    "region": "europe",
+    "name": {
+      "fi": "Republic of Kosovo",
+      "en": "Republic of Kosovo"
+    }
   },
   "RE": {
-    "fi": "Réunion",
-    "en": "Réunion"
+    "region": "africa",
+    "name": {
+      "fi": "Réunion",
+      "en": "Réunion"
+    }
   },
   "RO": {
-    "fi": "Romania",
-    "en": "Romania"
+    "region": "europe",
+    "name": {
+      "fi": "Romania",
+      "en": "Romania"
+    }
   },
   "RU": {
-    "fi": "Venäjä",
-    "en": "Russian Federation"
+    "region": "europe",
+    "name": {
+      "fi": "Venäjä",
+      "en": "Russian Federation"
+    }
   },
   "RW": {
-    "fi": "Ruanda",
-    "en": "Rwanda"
+    "region": "africa",
+    "name": {
+      "fi": "Ruanda",
+      "en": "Rwanda"
+    }
   },
   "BL": {
-    "fi": "Saint Barthélemy",
-    "en": "Saint Barthélemy"
+    "region": "americas",
+    "name": {
+      "fi": "Saint Barthélemy",
+      "en": "Saint Barthélemy"
+    }
   },
   "SH": {
-    "fi": "Saint Helena, Ascension ja Tristan da Cunha",
-    "en": "Saint Helena, Ascension and Tristan da Cunha"
+    "region": "africa",
+    "name": {
+      "fi": "Saint Helena, Ascension ja Tristan da Cunha",
+      "en": "Saint Helena, Ascension and Tristan da Cunha"
+    }
   },
   "KN": {
-    "fi": "Saint Kitts ja Nevis",
-    "en": "Saint Kitts and Nevis"
+    "region": "americas",
+    "name": {
+      "fi": "Saint Kitts ja Nevis",
+      "en": "Saint Kitts and Nevis"
+    }
   },
   "LC": {
-    "fi": "Saint Lucia",
-    "en": "Saint Lucia"
+    "region": "americas",
+    "name": {
+      "fi": "Saint Lucia",
+      "en": "Saint Lucia"
+    }
   },
   "MF": {
-    "fi": "Saint Martin (Ranskan osa)",
-    "en": "Saint Martin (French part)"
+    "region": "americas",
+    "name": {
+      "fi": "Saint Martin (Ranskan osa)",
+      "en": "Saint Martin (French part)"
+    }
   },
   "PM": {
-    "fi": "Saint-Pierre ja Miquelon",
-    "en": "Saint Pierre and Miquelon"
+    "region": "americas",
+    "name": {
+      "fi": "Saint-Pierre ja Miquelon",
+      "en": "Saint Pierre and Miquelon"
+    }
   },
   "VC": {
-    "fi": "Saint Vincent ja Grenadiinit",
-    "en": "Saint Vincent and the Grenadines"
+    "region": "americas",
+    "name": {
+      "fi": "Saint Vincent ja Grenadiinit",
+      "en": "Saint Vincent and the Grenadines"
+    }
   },
   "WS": {
-    "fi": "Samoa",
-    "en": "Samoa"
+    "region": "oceania",
+    "name": {
+      "fi": "Samoa",
+      "en": "Samoa"
+    }
   },
   "SM": {
-    "fi": "San Marino",
-    "en": "San Marino"
+    "region": "europe",
+    "name": {
+      "fi": "San Marino",
+      "en": "San Marino"
+    }
   },
   "ST": {
-    "fi": "São Tomé ja Príncipe",
-    "en": "Sao Tome and Principe"
+    "region": "africa",
+    "name": {
+      "fi": "São Tomé ja Príncipe",
+      "en": "Sao Tome and Principe"
+    }
   },
   "SA": {
-    "fi": "Saudi-Arabia",
-    "en": "Saudi Arabia"
+    "region": "asia",
+    "name": {
+      "fi": "Saudi-Arabia",
+      "en": "Saudi Arabia"
+    }
   },
   "SN": {
-    "fi": "Senegal",
-    "en": "Senegal"
+    "region": "africa",
+    "name": {
+      "fi": "Senegal",
+      "en": "Senegal"
+    }
   },
   "RS": {
-    "fi": "Serbia",
-    "en": "Serbia"
+    "region": "europe",
+    "name": {
+      "fi": "Serbia",
+      "en": "Serbia"
+    }
   },
   "SC": {
-    "fi": "Seychellit",
-    "en": "Seychelles"
+    "region": "africa",
+    "name": {
+      "fi": "Seychellit",
+      "en": "Seychelles"
+    }
   },
   "SL": {
-    "fi": "Sierra Leone",
-    "en": "Sierra Leone"
+    "region": "africa",
+    "name": {
+      "fi": "Sierra Leone",
+      "en": "Sierra Leone"
+    }
   },
   "SG": {
-    "fi": "Singapore",
-    "en": "Singapore"
+    "region": "asia",
+    "name": {
+      "fi": "Singapore",
+      "en": "Singapore"
+    }
   },
   "SX": {
-    "fi": "Sint Maarten (Alankomaiden osa)",
-    "en": "Sint Maarten (Dutch part)"
+    "region": "americas",
+    "name": {
+      "fi": "Sint Maarten (Alankomaiden osa)",
+      "en": "Sint Maarten (Dutch part)"
+    }
   },
   "SK": {
-    "fi": "Slovakia",
-    "en": "Slovakia"
+    "region": "europe",
+    "name": {
+      "fi": "Slovakia",
+      "en": "Slovakia"
+    }
   },
   "SI": {
-    "fi": "Slovenia",
-    "en": "Slovenia"
+    "region": "europe",
+    "name": {
+      "fi": "Slovenia",
+      "en": "Slovenia"
+    }
   },
   "SB": {
-    "fi": "Salomonsaaret",
-    "en": "Solomon Islands"
+    "region": "oceania",
+    "name": {
+      "fi": "Salomonsaaret",
+      "en": "Solomon Islands"
+    }
   },
   "SO": {
-    "fi": "Somalia",
-    "en": "Somalia"
+    "region": "africa",
+    "name": {
+      "fi": "Somalia",
+      "en": "Somalia"
+    }
   },
   "ZA": {
-    "fi": "Etelä-Afrikka",
-    "en": "South Africa"
+    "region": "africa",
+    "name": {
+      "fi": "Etelä-Afrikka",
+      "en": "South Africa"
+    }
   },
   "GS": {
-    "fi": "Etelä-Georgia ja Eteläiset Sandwichsaaret",
-    "en": "South Georgia and the South Sandwich Islands"
+    "region": "americas",
+    "name": {
+      "fi": "Etelä-Georgia ja Eteläiset Sandwichsaaret",
+      "en": "South Georgia and the South Sandwich Islands"
+    }
   },
   "KR": {
-    "fi": "Korean tasavalta (Etelä-Korea)",
-    "en": "Korea (Republic of)"
+    "region": "asia",
+    "name": {
+      "fi": "Korean tasavalta (Etelä-Korea)",
+      "en": "Korea (Republic of)"
+    }
   },
   "SS": {
-    "fi": "Etelä-Sudan",
-    "en": "South Sudan"
+    "region": "africa",
+    "name": {
+      "fi": "Etelä-Sudan",
+      "en": "South Sudan"
+    }
   },
   "ES": {
-    "fi": "Espanja",
-    "en": "Spain"
+    "region": "europe",
+    "name": {
+      "fi": "Espanja",
+      "en": "Spain"
+    }
   },
   "LK": {
-    "fi": "Sri Lanka",
-    "en": "Sri Lanka"
+    "region": "asia",
+    "name": {
+      "fi": "Sri Lanka",
+      "en": "Sri Lanka"
+    }
   },
   "SD": {
-    "fi": "Sudan",
-    "en": "Sudan"
+    "region": "africa",
+    "name": {
+      "fi": "Sudan",
+      "en": "Sudan"
+    }
   },
   "SR": {
-    "fi": "Suriname",
-    "en": "Suriname"
+    "region": "americas",
+    "name": {
+      "fi": "Suriname",
+      "en": "Suriname"
+    }
   },
   "SJ": {
-    "fi": "Svalbard ja Jan Mayen",
-    "en": "Svalbard and Jan Mayen"
+    "region": "europe",
+    "name": {
+      "fi": "Svalbard ja Jan Mayen",
+      "en": "Svalbard and Jan Mayen"
+    }
   },
   "SZ": {
-    "fi": "Swazimaa",
-    "en": "Swaziland"
+    "region": "africa",
+    "name": {
+      "fi": "Swazimaa",
+      "en": "Swaziland"
+    }
   },
   "SE": {
-    "fi": "Ruotsi",
-    "en": "Sweden"
+    "region": "europe",
+    "name": {
+      "fi": "Ruotsi",
+      "en": "Sweden"
+    }
   },
   "CH": {
-    "fi": "Sveitsi",
-    "en": "Switzerland"
+    "region": "europe",
+    "name": {
+      "fi": "Sveitsi",
+      "en": "Switzerland"
+    }
   },
   "SY": {
-    "fi": "Syyria",
-    "en": "Syrian Arab Republic"
+    "region": "asia",
+    "name": {
+      "fi": "Syyria",
+      "en": "Syrian Arab Republic"
+    }
   },
   "TW": {
-    "fi": "Taiwan",
-    "en": "Taiwan"
+    "region": "asia",
+    "name": {
+      "fi": "Taiwan",
+      "en": "Taiwan"
+    }
   },
   "TJ": {
-    "fi": "Tadžikistan",
-    "en": "Tajikistan"
+    "region": "asia",
+    "name": {
+      "fi": "Tadžikistan",
+      "en": "Tajikistan"
+    }
   },
   "TZ": {
-    "fi": "Tansania",
-    "en": "Tanzania, United Republic of"
+    "region": "africa",
+    "name": {
+      "fi": "Tansania",
+      "en": "Tanzania, United Republic of"
+    }
   },
   "TH": {
-    "fi": "Thaimaa",
-    "en": "Thailand"
+    "region": "asia",
+    "name": {
+      "fi": "Thaimaa",
+      "en": "Thailand"
+    }
   },
   "TL": {
-    "fi": "Itä-Timor",
-    "en": "Timor-Leste"
+    "region": "asia",
+    "name": {
+      "fi": "Itä-Timor",
+      "en": "Timor-Leste"
+    }
   },
   "TG": {
-    "fi": "Togo",
-    "en": "Togo"
+    "region": "africa",
+    "name": {
+      "fi": "Togo",
+      "en": "Togo"
+    }
   },
   "TK": {
-    "fi": "Tokelau",
-    "en": "Tokelau"
+    "region": "oceania",
+    "name": {
+      "fi": "Tokelau",
+      "en": "Tokelau"
+    }
   },
   "TO": {
-    "fi": "Tonga",
-    "en": "Tonga"
+    "region": "oceania",
+    "name": {
+      "fi": "Tonga",
+      "en": "Tonga"
+    }
   },
   "TT": {
-    "fi": "Trinidad ja Tobago",
-    "en": "Trinidad and Tobago"
+    "region": "americas",
+    "name": {
+      "fi": "Trinidad ja Tobago",
+      "en": "Trinidad and Tobago"
+    }
   },
   "TN": {
-    "fi": "Tunisia",
-    "en": "Tunisia"
+    "region": "africa",
+    "name": {
+      "fi": "Tunisia",
+      "en": "Tunisia"
+    }
   },
   "TR": {
-    "fi": "Turkki",
-    "en": "Turkey"
+    "region": "asia",
+    "name": {
+      "fi": "Turkki",
+      "en": "Turkey"
+    }
   },
   "TM": {
-    "fi": "Turkmenistan",
-    "en": "Turkmenistan"
+    "region": "asia",
+    "name": {
+      "fi": "Turkmenistan",
+      "en": "Turkmenistan"
+    }
   },
   "TC": {
-    "fi": "Turks- ja Caicossaaret",
-    "en": "Turks and Caicos Islands"
+    "region": "americas",
+    "name": {
+      "fi": "Turks- ja Caicossaaret",
+      "en": "Turks and Caicos Islands"
+    }
   },
   "TV": {
-    "fi": "Tuvalu",
-    "en": "Tuvalu"
+    "region": "oceania",
+    "name": {
+      "fi": "Tuvalu",
+      "en": "Tuvalu"
+    }
   },
   "UG": {
-    "fi": "Uganda",
-    "en": "Uganda"
+    "region": "africa",
+    "name": {
+      "fi": "Uganda",
+      "en": "Uganda"
+    }
   },
   "UA": {
-    "fi": "Ukraina",
-    "en": "Ukraine"
+    "region": "europe",
+    "name": {
+      "fi": "Ukraina",
+      "en": "Ukraine"
+    }
   },
   "AE": {
-    "fi": "Arabiemiirikunnat",
-    "en": "United Arab Emirates"
+    "region": "asia",
+    "name": {
+      "fi": "Arabiemiirikunnat",
+      "en": "United Arab Emirates"
+    }
   },
   "GB": {
-    "fi": "Britannia",
-    "en": "United Kingdom of Great Britain and Northern Ireland"
+    "region": "europe",
+    "name": {
+      "fi": "Britannia",
+      "en": "United Kingdom of Great Britain and Northern Ireland"
+    }
   },
   "US": {
-    "fi": "Yhdysvallat (USA)",
-    "en": "United States of America"
+    "region": "americas",
+    "name": {
+      "fi": "Yhdysvallat (USA)",
+      "en": "United States of America"
+    }
   },
   "UY": {
-    "fi": "Uruguay",
-    "en": "Uruguay"
+    "region": "americas",
+    "name": {
+      "fi": "Uruguay",
+      "en": "Uruguay"
+    }
   },
   "UZ": {
-    "fi": "Uzbekistan",
-    "en": "Uzbekistan"
+    "region": "asia",
+    "name": {
+      "fi": "Uzbekistan",
+      "en": "Uzbekistan"
+    }
   },
   "VU": {
-    "fi": "Vanuatu",
-    "en": "Vanuatu"
+    "region": "oceania",
+    "name": {
+      "fi": "Vanuatu",
+      "en": "Vanuatu"
+    }
   },
   "VE": {
-    "fi": "Venezuela",
-    "en": "Venezuela (Bolivarian Republic of)"
+    "region": "americas",
+    "name": {
+      "fi": "Venezuela",
+      "en": "Venezuela (Bolivarian Republic of)"
+    }
   },
   "VN": {
-    "fi": "Vietnam",
-    "en": "Viet Nam"
+    "region": "asia",
+    "name": {
+      "fi": "Vietnam",
+      "en": "Viet Nam"
+    }
   },
   "WF": {
-    "fi": "Wallis ja Futuna",
-    "en": "Wallis and Futuna"
+    "region": "oceania",
+    "name": {
+      "fi": "Wallis ja Futuna",
+      "en": "Wallis and Futuna"
+    }
   },
   "EH": {
-    "fi": "Länsi-Sahara",
-    "en": "Western Sahara"
+    "region": "africa",
+    "name": {
+      "fi": "Länsi-Sahara",
+      "en": "Western Sahara"
+    }
   },
   "YE": {
-    "fi": "Jemen",
-    "en": "Yemen"
+    "region": "asia",
+    "name": {
+      "fi": "Jemen",
+      "en": "Yemen"
+    }
   },
   "ZM": {
-    "fi": "Sambia",
-    "en": "Zambia"
+    "region": "africa",
+    "name": {
+      "fi": "Sambia",
+      "en": "Zambia"
+    }
   },
   "ZW": {
-    "fi": "Zimbabwe",
-    "en": "Zimbabwe"
+    "region": "africa",
+    "name": {
+      "fi": "Zimbabwe",
+      "en": "Zimbabwe"
+    }
   }
 }

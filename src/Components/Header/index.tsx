@@ -1,12 +1,17 @@
 import React from 'react';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 import Styled from './Styled';
 
 import Translations from '../../translations';
 
-const Header = ({ translations }: { translations: typeof Translations }) => {
+type Props = {
+  translations: typeof Translations;
+} & RouteComponentProps;
+
+const Header: React.FC<Props> = ({ translations, ...rest }) => {
   const { general } = translations;
   return (
-    <Styled.Container>
+    <Styled.Container onClick={() => rest.history.push(`/`)}>
       <h1>{general['application-name']}</h1>
       <h6>
         <i>{general['application-tagline']}</i>
@@ -15,4 +20,4 @@ const Header = ({ translations }: { translations: typeof Translations }) => {
   );
 };
 
-export default Header;
+export default withRouter(Header);

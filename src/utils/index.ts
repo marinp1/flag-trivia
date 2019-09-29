@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import countries from '../resources/countries.json';
-import { FLAG_ISO_CODE } from '../types';
+import { FLAG_ISO_CODE, FLAG_ISO_CODE_BY_REGION, Region } from '../types';
 
-export const FLAG_ISO_CODES = Object.keys(countries) as FLAG_ISO_CODE[];
+export const FLAG_ISO_CODES_ALL = Object.keys(countries) as FLAG_ISO_CODE[];
 
 export const GAME_MODES = <const>['random', 'similar', 'region'];
 export const REGIONS = <const>[
@@ -9,14 +10,28 @@ export const REGIONS = <const>[
   'africa',
   'asia',
   'europe',
-  'north-america',
-  'south-america',
+  'americas',
   'oceania',
 ];
 
-export const COUNTRIES: {
+export const COUNTRIES = countries as {
   [code in FLAG_ISO_CODE]: {
-    fi: string;
-    en: string;
+    region: Region;
+    name: {
+      fi: string;
+      en: string;
+    };
   };
-} = countries;
+};
+
+export const FLAG_ISO_CODES_BY_REGION = REGIONS.filter(
+  region => region !== 'world',
+).reduce(
+  (prev, cur) => ({
+    ...prev,
+    [cur]: Object.keys(_.pickBy(COUNTRIES, country => country.region === cur)),
+  }),
+  {
+    world: FLAG_ISO_CODES_ALL,
+  },
+) as FLAG_ISO_CODE_BY_REGION;

@@ -1,9 +1,15 @@
 import React from 'react';
 import _ from 'lodash';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import LazyFlags from '../../Flags';
 
-import { FLAG_ISO_CODES, COUNTRIES } from '../../utils';
-import { FLAG_ISO_CODE } from '../../types';
+import {
+  FLAG_ISO_CODES_BY_REGION,
+  COUNTRIES,
+  REGIONS,
+  GAME_MODES,
+} from '../../utils';
+import { FLAG_ISO_CODE, Region, GameMode } from '../../types';
 
 import Translations, { LANGUAGES } from '../../translations';
 
@@ -20,10 +26,13 @@ interface IQuestion {
   choices: FLAG_ISO_CODE[];
 }
 
-const generateQuestions = (questionCount: number): IQuestion[] => {
-  const FLAGS = _.shuffle(FLAG_ISO_CODES);
-  const pickRandom = () =>
-    FLAG_ISO_CODES[_.random(0, FLAG_ISO_CODES.length - 1)];
+const generateQuestions = (
+  ANSWER_ARRAY: FLAG_ISO_CODE[],
+  CHOICE_ARRAY: FLAG_ISO_CODE[],
+): IQuestion[] => {
+  const FLAGS = _.shuffle(ANSWER_ARRAY);
+  const CHOICES = _.shuffle(CHOICE_ARRAY);
+  const pickRandom = () => CHOICES[_.random(0, CHOICES.length - 1)];
 
   const getChoices = (answer: FLAG_ISO_CODE): FLAG_ISO_CODE[] => {
     const choices = [answer];
@@ -36,13 +45,18 @@ const generateQuestions = (questionCount: number): IQuestion[] => {
     return _.shuffle(choices);
   };
 
-  return [...new Array(questionCount)].map((a, ind) => ({
+  return [...new Array(ANSWER_ARRAY.length)].map((a, ind) => ({
     answer: FLAGS[ind],
     choices: getChoices(FLAGS[ind]),
   }));
 };
 
-const Game = ({ translations }: { translations: typeof Translations }) => {
+type Props = {
+  translations: typeof Translations;
+} & RouteComponentProps<{ mode: GameMode; region: Region }>;
+
+const Game: React.FC<Props> = ({ translations, ...rest }) => {
+  const { match } = rest;
   const [questions, setQuestions] = React.useState<IQuestion[]>([]);
 
   const [questionNumber, setQuestionNumber] = React.useState(-1);
@@ -82,9 +96,20 @@ const Game = ({ translations }: { translations: typeof Translations }) => {
   };
 
   React.useEffect(() => {
-    const questions = generateQuestions(FLAG_ISO_CODES.length);
+    if (!GAME_MODES.includes(match.params.mode)) {
+      return;
+    }
+    if (!REGIONS.includes(match.params.region)) {
+      return;
+    }
+    const ANSWER_FLAGS = FLAG_ISO_CODES_BY_REGION[match.params.region];
+    const CHOICE_FLAGS =
+      match.params.mode === 'region'
+        ? ANSWER_FLAGS
+        : FLAG_ISO_CODES_BY_REGION.world;
+    const questions = generateQuestions(ANSWER_FLAGS, CHOICE_FLAGS);
     setQuestions(questions);
-  }, []);
+  }, [match.params.region]);
 
   React.useEffect(() => {
     if (questionNumber < 0 || questionNumber >= questions.length) {
@@ -148,7 +173,7 @@ const Game = ({ translations }: { translations: typeof Translations }) => {
         <Question
           choices={questions[questionNumber].choices.map(code => ({
             code,
-            name: COUNTRIES[code][language],
+            name: COUNTRIES[code].name[language],
           }))}
           data={imageData}
           answerQuestion={answerQuestion}
@@ -158,4 +183,4 @@ const Game = ({ translations }: { translations: typeof Translations }) => {
   );
 };
 
-export default Game;
+export default withRouter(Game);

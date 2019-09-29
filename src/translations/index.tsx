@@ -36,8 +36,7 @@ const translations: ITranslation = new LocalizedStrings({
         africa: 'Africa',
         asia: 'Asia',
         europe: 'Europe',
-        'north-america': 'North America',
-        'south-america': 'South America',
+        americas: 'Americas',
         oceania: 'Oceania',
       },
       mode: {
@@ -84,8 +83,7 @@ const translations: ITranslation = new LocalizedStrings({
         africa: 'Afrikka',
         asia: 'Aasia',
         europe: 'Eurooppa',
-        'north-america': 'Pohjois-Amerikka',
-        'south-america': 'Etelä-Amerikka',
+        americas: 'Amerikat',
         oceania: 'Oseania',
       },
       mode: {

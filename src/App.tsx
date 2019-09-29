@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Header from './Components/Header';
 import Landing from './Components/Landing';
@@ -56,12 +56,19 @@ const App = () => {
               <Route
                 path="/"
                 exact={true}
-                render={() => <Landing translations={translations} />}
+                render={props => (
+                  <Landing translations={translations} {...props} />
+                )}
               />
               <Route
-                path="/quiz"
-                render={() => <Game translations={translations} />}
+                path="/quiz/:mode/:region"
+                render={props => (
+                  <Game translations={translations} {...props} />
+                )}
               />
+              <Redirect exact={true} from="/quiz" to="/quiz/random/world" />
+              <Redirect from="/quiz/*" to="/quiz/random/world" />
+              <Redirect from="/*" to="/" />
             </Switch>
           </div>
         </Styled.AppContainer>

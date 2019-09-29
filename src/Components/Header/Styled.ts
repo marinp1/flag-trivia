@@ -7,6 +7,7 @@ const Container = styled.div`
   background: ${props => props.theme.colors.background};
   padding-top: 2rem;
   h1 {
+    cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
     padding-bottom: 0.25rem;

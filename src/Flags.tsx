@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 import { FLAG_ISO_CODE } from './types';
-import { FLAG_ISO_CODES } from './utils';
+import { FLAG_ISO_CODES_ALL } from './utils';
 
 const getHash = (code: FLAG_ISO_CODE) =>
   crypto
@@ -8,7 +8,7 @@ const getHash = (code: FLAG_ISO_CODE) =>
     .update(`${code}.svg`)
     .digest('hex');
 
-const LazyFlags = FLAG_ISO_CODES.reduce(
+const LazyFlags = FLAG_ISO_CODES_ALL.reduce(
   (prev, code) => ({
     ...prev,
     [code]: `${process.env.PUBLIC_URL}/flags/${getHash(code)}.svg`,
