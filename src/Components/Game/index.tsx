@@ -3,6 +3,8 @@ import _ from 'lodash';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import LazyFlags from '../../Flags';
 
+import { ProgressBar } from '../Utils';
+
 import {
   FLAG_ISO_CODES_BY_REGION,
   COUNTRIES,
@@ -155,20 +157,30 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
   }
 
   const language = translations.getLanguage() as LANGUAGES;
+  const headerText = String(
+    translations.formatString(
+      translations.game['question-title-label'],
+      questionNumber + 1,
+      questions.length,
+    ),
+  );
+
+  const statusText = String(
+    translations.formatString<string | number>(
+      translations.game['status-label'],
+      correct,
+      questions.length,
+      ((correct / questions.length) * 100).toFixed(2),
+    ),
+  );
 
   return (
     <div>
-      <h2>
-        {translations.formatString(
-          translations.game['question-title-label'],
-          questionNumber + 1,
-          questions.length,
-        )}
-        <br />
-        Correct: {correct}
-        <br />
-        Incorrect: {incorrect}
-      </h2>
+      <ProgressBar
+        text={headerText}
+        progress={questionNumber / questions.length}
+        statusText={statusText}
+      />
       <React.Suspense fallback={<Loading />}>
         <Question
           choices={questions[questionNumber].choices.map(code => ({

@@ -18,6 +18,7 @@ interface ISettingsTranslation {
 interface IGameTranslation {
   'game-over-text': string;
   'question-title-label': string;
+  'status-label': string;
 }
 
 interface IGeneralTranslation {

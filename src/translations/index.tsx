@@ -26,6 +26,7 @@ const translations: ITranslation = new LocalizedStrings({
     game: {
       'game-over-text': 'Game over',
       'question-title-label': 'Question {0} / {1}',
+      'status-label': '{0} / {1} correct ({2}%)',
     },
     landing: {
       'start-new-game-label': 'Start new game',
@@ -73,6 +74,7 @@ const translations: ITranslation = new LocalizedStrings({
     game: {
       'game-over-text': 'Peli ohi',
       'question-title-label': 'Kysymys {0} / {1}',
+      'status-label': '{0} / {1} oikein ({2}%)',
     },
     landing: {
       'start-new-game-label': 'Aloita uusi peli',
