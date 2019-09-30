@@ -53,6 +53,7 @@ const App = () => {
             style={{
               gridArea: 'content',
               padding: '0 2rem 2rem 2rem',
+              maxWidth: '960px',
             }}
           >
             <Switch>

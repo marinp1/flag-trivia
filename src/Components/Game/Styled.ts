@@ -24,7 +24,7 @@ const QuestonContainer = styled.div`
   display: grid;
   height: 100%;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto auto;
   column-gap: 2rem;
   row-gap: 2rem;
   grid-template-areas:
@@ -45,7 +45,7 @@ const QuestionFlagContainer = styled.div`
   > img {
     width: inherit;
     max-height: 100%;
-    object-position: left;
+    object-position: center;
     object-fit: contain;
     position: absolute;
     background: transparent;

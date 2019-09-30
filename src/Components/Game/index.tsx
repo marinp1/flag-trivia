@@ -71,6 +71,8 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
   const [incorrect, setIncorrect] = React.useState(0);
   const [imageData, setImageData] = React.useState<string>();
 
+  const toastId = React.useRef<string | undefined>(undefined);
+
   const preloadedImages = React.useRef<
     Partial<{ [code in FLAG_ISO_CODE]: any }>
   >({});
@@ -104,45 +106,38 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
 
   const answerQuestion = (answer: FLAG_ISO_CODE) => {
     const wasCorrect = answer === questions[questionNumber].answer;
-    toast.dismiss('status-toast');
     const src = preloadedImages.current[questions[questionNumber].answer];
     const answerName = COUNTRIES[answer].name[language];
     const correctName =
       COUNTRIES[questions[questionNumber].answer].name[language];
 
-    if (wasCorrect) {
-      /*
-        toast(
-          <Styled.ToastContainer src={src}>
-            <div />
-            <span>
-              {translations.formatString(
-                translations.game['prev-answer-correct-label'],
-                <b>{answerName}</b>,
-              )}
-            </span>
-          </Styled.ToastContainer>,
-          {
-            toastId: 'status-toast',
-          },
-        );
-        */
-    } else {
-      toast(
-        <Styled.ToastContainer src={src}>
-          <div />
-          <span>
-            {translations.formatString(
-              translations.game['prev-answer-incorrect-label'],
-              <b>{answerName}</b>,
-              <b>{correctName}</b>,
-            )}
-          </span>
-        </Styled.ToastContainer>,
-        {
+    const ToastContent = () => (
+      <Styled.ToastContainer src={src}>
+        <div />
+        <span>
+          {translations.formatString(
+            translations.game['prev-answer-incorrect-label'],
+            <b>{answerName}</b>,
+            <b>{correctName}</b>,
+          )}
+        </span>
+      </Styled.ToastContainer>
+    );
+
+    if (!wasCorrect) {
+      if (toastId.current) {
+        toast.update('status-toast', {
+          render: <ToastContent />,
+        });
+      } else {
+        toastId.current = 'status-toast';
+        toast(<ToastContent />, {
+          autoClose: 5000,
           toastId: 'status-toast',
-        },
-      );
+          position: 'bottom-right',
+          onClose: () => (toastId.current = undefined),
+        });
+      }
     }
     nextQuestion(wasCorrect);
   };
