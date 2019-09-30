@@ -113,10 +113,12 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
       toast.success(
         <Styled.ToastContainer src={src}>
           <div />
-          {translations.formatString<string>(
-            translations.game['prev-answer-correct-label'],
-            answerName,
-          )}
+          <span>
+            {translations.formatString(
+              translations.game['prev-answer-correct-label'],
+              <b>{answerName}</b>,
+            )}
+          </span>
         </Styled.ToastContainer>,
         {
           toastId: 'status-toast',
@@ -126,11 +128,13 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
       toast.error(
         <Styled.ToastContainer src={src}>
           <div />
-          {translations.formatString<string>(
-            translations.game['prev-answer-incorrect-label'],
-            answerName,
-            correctName,
-          )}
+          <span>
+            {translations.formatString(
+              translations.game['prev-answer-incorrect-label'],
+              <b>{answerName}</b>,
+              <b>{correctName}</b>,
+            )}
+          </span>
         </Styled.ToastContainer>,
         {
           toastId: 'status-toast',
