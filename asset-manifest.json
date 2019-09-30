@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/flag-trivia/static/css/main.dd3409e9.chunk.css",
-    "main.js": "/flag-trivia/static/js/main.56d94433.chunk.js",
-    "main.js.map": "/flag-trivia/static/js/main.56d94433.chunk.js.map",
+    "main.js": "/flag-trivia/static/js/main.dd515825.chunk.js",
+    "main.js.map": "/flag-trivia/static/js/main.dd515825.chunk.js.map",
     "runtime-main.js": "/flag-trivia/static/js/runtime-main.d2f1f3fe.js",
     "runtime-main.js.map": "/flag-trivia/static/js/runtime-main.d2f1f3fe.js.map",
     "static/css/2.5dbdccff.chunk.css": "/flag-trivia/static/css/2.5dbdccff.chunk.css",
@@ -11,7 +11,7 @@
     "static/js/3.3cf885f9.chunk.js": "/flag-trivia/static/js/3.3cf885f9.chunk.js",
     "static/js/3.3cf885f9.chunk.js.map": "/flag-trivia/static/js/3.3cf885f9.chunk.js.map",
     "index.html": "/flag-trivia/index.html",
-    "precache-manifest.f808fb691f4b55cbe15d395c659bf2f1.js": "/flag-trivia/precache-manifest.f808fb691f4b55cbe15d395c659bf2f1.js",
+    "precache-manifest.6ba517f19a72d562c2fc63cae9b13109.js": "/flag-trivia/precache-manifest.6ba517f19a72d562c2fc63cae9b13109.js",
     "service-worker.js": "/flag-trivia/service-worker.js",
     "static/css/2.5dbdccff.chunk.css.map": "/flag-trivia/static/css/2.5dbdccff.chunk.css.map",
     "static/css/main.dd3409e9.chunk.css.map": "/flag-trivia/static/css/main.dd3409e9.chunk.css.map"
