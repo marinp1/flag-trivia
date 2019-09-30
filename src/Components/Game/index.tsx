@@ -105,43 +105,48 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
   const answerQuestion = (answer: FLAG_ISO_CODE) => {
     const wasCorrect = answer === questions[questionNumber].answer;
     toast.dismiss('status-toast');
-    const src = preloadedImages.current[questions[questionNumber].answer];
-    const answerName = COUNTRIES[answer].name[language];
-    const correctName =
-      COUNTRIES[questions[questionNumber].answer].name[language];
-    if (wasCorrect) {
-      toast(
-        <Styled.ToastContainer src={src}>
-          <div />
-          <span>
-            {translations.formatString(
-              translations.game['prev-answer-correct-label'],
-              <b>{answerName}</b>,
-            )}
-          </span>
-        </Styled.ToastContainer>,
-        {
-          toastId: 'status-toast',
-        },
-      );
-    } else {
-      toast(
-        <Styled.ToastContainer src={src}>
-          <div />
-          <span>
-            {translations.formatString(
-              translations.game['prev-answer-incorrect-label'],
-              <b>{answerName}</b>,
-              <b>{correctName}</b>,
-            )}
-          </span>
-        </Styled.ToastContainer>,
-        {
-          toastId: 'status-toast',
-        },
-      );
-    }
-    nextQuestion(wasCorrect);
+    setTimeout(() => {
+      const src = preloadedImages.current[questions[questionNumber].answer];
+      const answerName = COUNTRIES[answer].name[language];
+      const correctName =
+        COUNTRIES[questions[questionNumber].answer].name[language];
+
+      if (wasCorrect) {
+        /*
+        toast(
+          <Styled.ToastContainer src={src}>
+            <div />
+            <span>
+              {translations.formatString(
+                translations.game['prev-answer-correct-label'],
+                <b>{answerName}</b>,
+              )}
+            </span>
+          </Styled.ToastContainer>,
+          {
+            toastId: 'status-toast',
+          },
+        );
+        */
+      } else {
+        toast(
+          <Styled.ToastContainer src={src}>
+            <div />
+            <span>
+              {translations.formatString(
+                translations.game['prev-answer-incorrect-label'],
+                <b>{answerName}</b>,
+                <b>{correctName}</b>,
+              )}
+            </span>
+          </Styled.ToastContainer>,
+          {
+            toastId: 'status-toast',
+          },
+        );
+      }
+      nextQuestion(wasCorrect);
+    }, 5);
   };
 
   React.useEffect(() => {
