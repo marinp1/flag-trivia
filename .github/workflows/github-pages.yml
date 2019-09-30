@@ -17,5 +17,14 @@ jobs:
           node-version: 12
       - name: Install dependencies
         run: yarn install
+      - name: Build
+        run: yarn build
       - name: Deploy
+        if: success()
         run: yarn deploy
+        uses: crazy-max/ghaction-github-pages@master
+        with:
+          target_branch: gh-pages
+          build_dir: build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
