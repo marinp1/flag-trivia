@@ -65,7 +65,7 @@ const Container = styled.div<ContainerProps>`
 
   padding: ${props => (props.open ? '2rem' : '2rem 0.5rem')};
   ${breakpoints.mobile} {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     .hamburger {
       display: block;
     }

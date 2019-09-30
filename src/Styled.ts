@@ -7,13 +7,11 @@ interface Props {
 
 const Container = styled.div<Props>`
   display: grid;
-  position: absolute;
+  position: relative;
+  width: 100%;
+  height: 100%;
   background: ${props => props.theme.colors.background};
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  grid-template-rows: 1fr;
+  grid-template-rows: 100%;
   grid-template-areas: 'settings app';
   grid-template-columns: ${props =>
     props.settingsOpen ? '100% 0%' : 'auto 1fr'};
