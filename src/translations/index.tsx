@@ -27,6 +27,8 @@ const translations: ITranslation = new LocalizedStrings({
       'game-over-text': 'Game over',
       'question-title-label': 'Question {0} / {1}',
       'status-label': '{0} / {1} correct ({2}%)',
+      'prev-answer-correct-label': 'You answered {0} correctly.',
+      'prev-answer-incorrect-label': 'You answered {0}, correct was {1}.',
     },
     landing: {
       'start-new-game-label': 'Start new game',
@@ -75,6 +77,8 @@ const translations: ITranslation = new LocalizedStrings({
       'game-over-text': 'Peli ohi',
       'question-title-label': 'Kysymys {0} / {1}',
       'status-label': '{0} / {1} oikein ({2}%)',
+      'prev-answer-correct-label': 'Vastasit maan {0} oikein.',
+      'prev-answer-incorrect-label': 'Vastasit {0}, kyseessä oli {1}.',
     },
     landing: {
       'start-new-game-label': 'Aloita uusi peli',
@@ -94,7 +98,7 @@ const translations: ITranslation = new LocalizedStrings({
         region: 'Alue',
       },
       'select-mode-info-label': {
-        random: 'Vaihtoehdot ovat valittu kaikkien lippujen joukosta.',
+        random: 'Vaihtoehdot on valittu kaikkien lippujen joukosta.',
         similar: 'Vaihtoehdot ovat samankaltaisia.',
         region: 'Vaihtoehdot ovat samalta alueelta.',
       },

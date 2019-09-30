@@ -1,6 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import LazyFlags from '../../Flags';
 
 import { ProgressBar } from '../Utils';
@@ -13,6 +15,7 @@ import {
   REGIONS,
   GAME_MODES,
 } from '../../utils';
+
 import { FLAG_ISO_CODE, Region, GameMode } from '../../types';
 
 import Translations, { LANGUAGES } from '../../translations';
@@ -90,13 +93,51 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
     }
   };
 
-  const answerQuestion = (answer: FLAG_ISO_CODE) => {
-    if (answer === questions[questionNumber].answer) {
+  const nextQuestion = (prevCorrect: boolean) => {
+    if (prevCorrect) {
       setCorrect(correct + 1);
     } else {
       setIncorrect(incorrect + 1);
     }
     setQuestionNumber(questionNumber + 1);
+  };
+
+  const answerQuestion = (answer: FLAG_ISO_CODE) => {
+    const wasCorrect = answer === questions[questionNumber].answer;
+    toast.dismiss('status-toast');
+    const src = preloadedImages.current[questions[questionNumber].answer];
+    const answerName = COUNTRIES[answer].name[language];
+    const correctName =
+      COUNTRIES[questions[questionNumber].answer].name[language];
+    if (wasCorrect) {
+      toast.success(
+        <Styled.ToastContainer src={src}>
+          <div />
+          {translations.formatString<string>(
+            translations.game['prev-answer-correct-label'],
+            answerName,
+          )}
+        </Styled.ToastContainer>,
+        {
+          toastId: 'status-toast',
+        },
+      );
+    } else {
+      toast.error(
+        <Styled.ToastContainer src={src}>
+          <div />
+          {translations.formatString<string>(
+            translations.game['prev-answer-incorrect-label'],
+            answerName,
+            correctName,
+          )}
+        </Styled.ToastContainer>,
+        {
+          toastId: 'status-toast',
+        },
+      );
+    }
+    nextQuestion(wasCorrect);
   };
 
   React.useEffect(() => {
@@ -177,25 +218,28 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
   );
 
   return (
-    <Styled.Container>
-      <Styled.ProgressBar>
-        <ProgressBar
-          text={headerText}
-          progress={questionNumber / questions.length}
-          statusText={statusText}
-        />
-      </Styled.ProgressBar>
-      <React.Suspense fallback={<Loading />}>
-        <Question
-          choices={questions[questionNumber].choices.map(code => ({
-            code,
-            name: COUNTRIES[code].name[language],
-          }))}
-          data={imageData}
-          answerQuestion={answerQuestion}
-        />
-      </React.Suspense>
-    </Styled.Container>
+    <React.Fragment>
+      <Styled.Container>
+        <Styled.ProgressBar>
+          <ProgressBar
+            text={headerText}
+            progress={questionNumber / questions.length}
+            statusText={statusText}
+          />
+        </Styled.ProgressBar>
+        <React.Suspense fallback={<Loading />}>
+          <Question
+            choices={questions[questionNumber].choices.map(code => ({
+              code,
+              name: COUNTRIES[code].name[language],
+            }))}
+            data={imageData}
+            answerQuestion={answerQuestion}
+          />
+        </React.Suspense>
+      </Styled.Container>
+      <ToastContainer />
+    </React.Fragment>
   );
 };
 

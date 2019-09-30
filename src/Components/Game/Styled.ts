@@ -70,9 +70,25 @@ const QuestionChoiceContainer = styled.div`
   }
 `;
 
+const ToastContainer = styled.div<{ src: string }>`
+  display: flex;
+  align-items: center;
+  > div {
+    width: 64px;
+    height: 32px;
+    margin: 0.5rem;
+    box-shadow: ${props => props.theme.boxShadow};
+    background-image: ${props => `url(${props.src})`};
+    background-size: cover;
+    background-position: center center;
+    margin-right: 1rem;
+  }
+`;
+
 export default {
   Container,
   ProgressBar,
+  ToastContainer,
   Question: {
     Container: QuestonContainer,
     FlagContainer: QuestionFlagContainer,

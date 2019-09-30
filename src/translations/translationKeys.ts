@@ -19,6 +19,8 @@ interface IGameTranslation {
   'game-over-text': string;
   'question-title-label': string;
   'status-label': string;
+  'prev-answer-correct-label': string;
+  'prev-answer-incorrect-label': string;
 }
 
 interface IGeneralTranslation {
