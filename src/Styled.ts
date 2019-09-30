@@ -21,9 +21,23 @@ const Container = styled.div<Props>`
     grid-template-columns: auto 1fr;
   }
   .Toastify__toast-container {
-    width: 400px;
     opacity: 0.98;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     border-radius: 0.5rem;
+    width: 100vw;
+    padding: 0;
+    left: 0;
+    margin: 0;
+    ${breakpoints.mobile} {
+      left: unset;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      padding-top: 1rem;
+      padding-right: 1rem;
+      width: unset;
+      max-width: 600px;
+    }
   }
 
   .Toastify__toast--default {
