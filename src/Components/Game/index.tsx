@@ -5,6 +5,8 @@ import LazyFlags from '../../Flags';
 
 import { ProgressBar } from '../Utils';
 
+import Styled from './Styled';
+
 import {
   FLAG_ISO_CODES_BY_REGION,
   COUNTRIES,
@@ -175,12 +177,14 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
   );
 
   return (
-    <div>
-      <ProgressBar
-        text={headerText}
-        progress={questionNumber / questions.length}
-        statusText={statusText}
-      />
+    <Styled.Container>
+      <Styled.ProgressBar>
+        <ProgressBar
+          text={headerText}
+          progress={questionNumber / questions.length}
+          statusText={statusText}
+        />
+      </Styled.ProgressBar>
       <React.Suspense fallback={<Loading />}>
         <Question
           choices={questions[questionNumber].choices.map(code => ({
@@ -191,7 +195,7 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
           answerQuestion={answerQuestion}
         />
       </React.Suspense>
-    </div>
+    </Styled.Container>
   );
 };
 

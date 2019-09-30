@@ -10,6 +10,7 @@ const Button = styled.button`
   font-weight: bold;
   text-transform: uppercase;
   color: ${props => props.theme.colors.primary};
+  width: 100%;
   cursor: pointer;
   :hover {
     filter: brightness(95%);

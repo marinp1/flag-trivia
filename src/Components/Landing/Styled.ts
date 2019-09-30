@@ -34,9 +34,6 @@ const GridCell = styled.div<GridCellProps>`
 
 const ButtonCell = styled.div<GridCellProps>`
   align-self: end;
-  button {
-    width: 100%;
-  }
   ${breakpoints.tablet} {
     grid-column-start: 1;
     grid-column-end: span 2;

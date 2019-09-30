@@ -9,7 +9,8 @@ interface Props {
 const Container = styled.div<Props>`
   position: relative;
   width: 100%;
-  height: 2rem;
+  box-sizing: border-box;
+  height: 2.5rem;
   background: ${props => props.theme.elements.color2};
   border-radius: ${props => props.theme.borderRadius};
   padding: 0.2rem;

@@ -1,6 +1,11 @@
 import React from 'react';
-import { FLAG_ISO_CODE } from '../../types';
-import './Question.css';
+
+import StyledRaw from '../Styled';
+import { FLAG_ISO_CODE } from '../../../types';
+
+import { Button } from '../../Utils';
+
+const Styled = StyledRaw.Question;
 
 export interface Props {
   choices: { code: FLAG_ISO_CODE; name: string }[];
@@ -14,22 +19,21 @@ const Question = (props: Props) => {
   }
 
   return (
-    <div className="question-container">
-      <div className="flag-container">
+    <Styled.Container>
+      <Styled.FlagContainer>
         <img src={props.data} />
-      </div>
-      <div className="question-grid">
+      </Styled.FlagContainer>
+      <Styled.ChoiceContainer>
         {props.choices.map(choice => (
-          <button
+          <Button
             key={`choice-${choice.code}`}
-            className="question"
             onClick={() => props.answerQuestion(choice.code)}
           >
-            <p>{choice.name}</p>
-          </button>
+            {choice.name}
+          </Button>
         ))}
-      </div>
-    </div>
+      </Styled.ChoiceContainer>
+    </Styled.Container>
   );
 };
 
