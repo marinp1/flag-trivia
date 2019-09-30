@@ -20,6 +20,24 @@ const Container = styled.div<Props>`
   ${breakpoints.tablet} {
     grid-template-columns: auto 1fr;
   }
+  .Toastify__toast-container {
+    width: 400px;
+    opacity: 0.98;
+    border-radius: 0.5rem;
+  }
+
+  .Toastify__toast--default {
+    background: ${props => props.theme.elements.color1};
+  }
+
+  .Toastify__progress-bar--default {
+    background: ${props => props.theme.elements.color2};
+  }
+
+  .Toastify__toast {
+    border-radius: 0.5rem !important;
+    color: ${props => props.theme.colors.primary};
+  }
 `;
 
 const AppContainer = styled.div`

@@ -110,7 +110,7 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
     const correctName =
       COUNTRIES[questions[questionNumber].answer].name[language];
     if (wasCorrect) {
-      toast.success(
+      toast(
         <Styled.ToastContainer src={src}>
           <div />
           <span>
@@ -125,7 +125,7 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
         },
       );
     } else {
-      toast.error(
+      toast(
         <Styled.ToastContainer src={src}>
           <div />
           <span>
