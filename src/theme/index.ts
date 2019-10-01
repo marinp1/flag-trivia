@@ -4,7 +4,7 @@ export const breakpoints = {
   desktop: `@media (min-width: 1200px)`,
 };
 
-export interface ITheme {
+export interface Theme {
   colors: {
     primary: React.CSSProperties['color'];
     border: React.CSSProperties['color'];
@@ -20,7 +20,7 @@ export interface ITheme {
   smallBoxShadow: React.CSSProperties['boxShadow'];
 }
 
-const lightTheme: ITheme = {
+const lightTheme: Theme = {
   colors: {
     background: '#f5f5f5',
     primary: '#333',
@@ -36,7 +36,7 @@ const lightTheme: ITheme = {
   smallBoxShadow: '0px 1px 1px 0px rgba(0,0,0,0.05)',
 };
 
-const darkTheme: ITheme = {
+const darkTheme: Theme = {
   colors: {
     background: '#2A2A2E',
     primary: '#eee',
@@ -55,7 +55,7 @@ const darkTheme: ITheme = {
 export type APP_THEME = 'light' | 'dark';
 
 const APP_THEMES: {
-  [key in APP_THEME]: ITheme;
+  [key in APP_THEME]: Theme;
 } = {
   light: lightTheme,
   dark: darkTheme,
@@ -67,7 +67,7 @@ export const getThemeByName = (
   name: APP_THEME,
 ): {
   name: APP_THEME;
-  value: ITheme;
+  value: Theme;
 } => ({
   name,
   value: APP_THEMES[name],
@@ -75,7 +75,7 @@ export const getThemeByName = (
 
 export const currentTheme = (): {
   name: APP_THEME;
-  value: ITheme;
+  value: Theme;
 } => {
   const currentThemeName = localStorage.getItem('app_theme');
   const theme = APP_THEMES[currentThemeName as APP_THEME];

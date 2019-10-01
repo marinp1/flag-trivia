@@ -16,6 +16,7 @@ import translations from './translations';
 import Styled from './Styled';
 
 function useForceUpdate() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [value, set] = React.useState(true); //boolean state
   return () => set(value => !value); // toggle the state to force render
 }

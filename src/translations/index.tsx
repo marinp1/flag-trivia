@@ -1,7 +1,7 @@
 import LocalizedStrings from 'react-localization';
-import ITranslation from './translationKeys';
+import { ITranslation, ILanguageNameTranslation } from './translationKeys';
 
-export type LANGUAGES = keyof typeof translations.lang;
+export type LANGUAGES = keyof ILanguageNameTranslation;
 
 const translations: ITranslation = new LocalizedStrings({
   en: {

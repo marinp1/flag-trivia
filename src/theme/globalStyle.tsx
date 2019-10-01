@@ -1,7 +1,7 @@
-import { css } from '@emotion/core';
-import { breakpoints, ITheme } from './index';
+import { css, SerializedStyles } from '@emotion/core';
+import { breakpoints, Theme } from './index';
 
-const globalStyle = (theme: ITheme) => css`
+const globalStyle = (theme: Theme): SerializedStyles => css`
   * {
     font-family: 'Montserrat', sans-serif;
   }

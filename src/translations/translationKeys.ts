@@ -4,7 +4,7 @@ import { Region, GameMode } from '../types';
 
 type IThemeNameTranslation = { [key in APP_THEME]: string };
 
-interface ILanguageNameTranslation {
+export interface ILanguageNameTranslation {
   en: string;
   fi: string;
 }
@@ -41,7 +41,7 @@ interface ILandingTranslation {
   'select-mode-info-label': ModeTranslation;
 }
 
-interface ITranslation extends LocalizedStringsMethods {
+export interface ITranslation extends LocalizedStringsMethods {
   theme: IThemeNameTranslation;
   lang: ILanguageNameTranslation;
   settings: ISettingsTranslation;
@@ -49,5 +49,3 @@ interface ITranslation extends LocalizedStringsMethods {
   general: IGeneralTranslation;
   landing: ILandingTranslation;
 }
-
-export default ITranslation;

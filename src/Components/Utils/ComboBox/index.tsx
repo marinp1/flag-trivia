@@ -9,7 +9,7 @@ interface Choice<T> {
 }
 
 interface Props<T> {
-  title?: any;
+  title?: string;
   selection: T;
   choices: Choice<T>[];
   setSelection: (selectedValue: T) => void;
@@ -23,7 +23,7 @@ function ComboBox<T extends string | number>(props: Props<T>) {
       {title && <Styled.Title>{title}</Styled.Title>}
       <Styled.Container>
         {choices.map((choice: Choice<T>) => (
-          <React.Fragment>
+          <React.Fragment key={choice.key}>
             <Styled.Selection
               tag={choice.extra ? { content: choice.extra } : undefined}
               key={`cb-choice-${choice.key}`}

@@ -4,15 +4,15 @@ import { FLAG_ISO_CODE, FLAG_ISO_CODE_BY_REGION, Region } from '../types';
 
 export const FLAG_ISO_CODES_ALL = Object.keys(countries) as FLAG_ISO_CODE[];
 
-export const GAME_MODES = <const>['random', 'similar', 'region'];
-export const REGIONS = <const>[
+export const GAME_MODES = ['random', 'similar', 'region'] as const;
+export const REGIONS = [
   'world',
   'africa',
   'asia',
   'europe',
   'americas',
   'oceania',
-];
+] as const;
 
 export const COUNTRIES = countries as {
   [code in FLAG_ISO_CODE]: {

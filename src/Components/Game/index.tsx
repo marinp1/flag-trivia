@@ -20,15 +20,17 @@ import { FLAG_ISO_CODE, Region, GameMode } from '../../types';
 
 import Translations, { LANGUAGES } from '../../translations';
 
+// import EndScreen from './EndScreen';
+
 const Question = React.lazy(() => import('./Question'));
 
 const CHOICE_COUNT = 4;
 
-const Loading = () => {
+const Loading = (): React.ReactElement => {
   return <h1>Loading...</h1>;
 };
 
-interface IQuestion {
+interface Question {
   answer: FLAG_ISO_CODE;
   choices: FLAG_ISO_CODE[];
 }
@@ -36,10 +38,11 @@ interface IQuestion {
 const generateQuestions = (
   ANSWER_ARRAY: FLAG_ISO_CODE[],
   CHOICE_ARRAY: FLAG_ISO_CODE[],
-): IQuestion[] => {
+): Question[] => {
   const FLAGS = _.shuffle(ANSWER_ARRAY);
   const CHOICES = _.shuffle(CHOICE_ARRAY);
-  const pickRandom = () => CHOICES[_.random(0, CHOICES.length - 1)];
+  const pickRandom = (): FLAG_ISO_CODE =>
+    CHOICES[_.random(0, CHOICES.length - 1)];
 
   const getChoices = (answer: FLAG_ISO_CODE): FLAG_ISO_CODE[] => {
     const choices = [answer];
@@ -64,7 +67,7 @@ type Props = {
 
 const Game: React.FC<Props> = ({ translations, ...rest }) => {
   const { match } = rest;
-  const [questions, setQuestions] = React.useState<IQuestion[]>([]);
+  const [questions, setQuestions] = React.useState<Question[]>([]);
 
   const [questionNumber, setQuestionNumber] = React.useState(-1);
   const [correct, setCorrect] = React.useState(0);
@@ -72,12 +75,13 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
   const [imageData, setImageData] = React.useState<string>();
 
   const toastId = React.useRef<string | undefined>(undefined);
+  const language = translations.getLanguage() as LANGUAGES;
 
   const preloadedImages = React.useRef<
-    Partial<{ [code in FLAG_ISO_CODE]: any }>
+    Partial<{ [code in FLAG_ISO_CODE]: string }>
   >({});
 
-  const preloadImage = async (questionNumber: number) => {
+  const preloadImage = async (questionNumber: number): Promise<void> => {
     if (questionNumber >= questions.length || questionNumber < 0) {
       return;
     }
@@ -86,7 +90,7 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
       const data = LazyFlags[code];
       const img = new Image();
       img.src = data;
-      img.onload = () => {
+      img.onload = (): void => {
         if (questionNumber === 0) {
           setImageData(data);
         }
@@ -95,7 +99,7 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
     }
   };
 
-  const nextQuestion = (prevCorrect: boolean) => {
+  const nextQuestion = (prevCorrect: boolean): void => {
     if (prevCorrect) {
       setCorrect(correct + 1);
     } else {
@@ -104,14 +108,18 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
     setQuestionNumber(questionNumber + 1);
   };
 
-  const answerQuestion = (answer: FLAG_ISO_CODE) => {
+  const answerQuestion = (answer: FLAG_ISO_CODE): void => {
     const wasCorrect = answer === questions[questionNumber].answer;
     const src = preloadedImages.current[questions[questionNumber].answer];
     const answerName = COUNTRIES[answer].name[language];
     const correctName =
       COUNTRIES[questions[questionNumber].answer].name[language];
 
-    const ToastContent = () => (
+    if (!src) {
+      throw new Error('Unknown error!');
+    }
+
+    const ToastContent = (): React.ReactElement => (
       <Styled.ToastContainer src={src}>
         <div />
         <span>
@@ -201,7 +209,6 @@ const Game: React.FC<Props> = ({ translations, ...rest }) => {
     );
   }
 
-  const language = translations.getLanguage() as LANGUAGES;
   const headerText = String(
     translations.formatString(
       translations.game['question-title-label'],
